@@ -100,14 +100,14 @@
         -moz-tab-size: 4;
         tab-size: 4;
         line-height: 1.5;
-        font-family: "Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
         font-feature-settings: var(--default-font-feature-settings,normal);
         font-variation-settings: var(--default-font-variation-settings,normal);
         -webkit-tap-highlight-color: transparent
     }
 
     body {
-        line-height: inherit
+        line-height: inherit;
+        font-family: "Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
     }
 
     hr {
