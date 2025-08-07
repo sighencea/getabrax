@@ -1,7 +1,23 @@
+import Navigation from '@/components/Navigation'
+import HeroSection from '@/components/HeroSection'
+import BenefitsGrid from '@/components/BenefitsGrid'
+import VideoTestimonialSection from '@/components/VideoTestimonialSection'
+import HowItWorks from '@/components/HowItWorks'
+import SignupFormSection from '@/components/SignupFormSection'
+import Footer from '@/components/Footer'
+
 export default function Home() {
   return (
-    <main className="flex min-h-screen items-center justify-center">
-      <h1 className="text-3xl font-bold text-center">Welcome to the Next.js Boilerplate</h1>
+    <main>
+      <Navigation />
+      <div className="pt-16">
+        <HeroSection />
+        <BenefitsGrid />
+        <VideoTestimonialSection />
+        <HowItWorks />
+        <SignupFormSection />
+        <Footer />
+      </div>
     </main>
   )
 }
