@@ -1,7 +1,6 @@
 'use client'
 
 import React from 'react'
-import Image from 'next/image'
 
 const VideoTestimonialSection = () => {
   return (
@@ -12,10 +11,10 @@ const VideoTestimonialSection = () => {
             <div className="relative">
               <div className="relative bg-gray-900 rounded-2xl overflow-hidden shadow-2xl">
                 <div className="relative">
-                  <Image
+                  <img
                     alt="Property maintenance dashboard demo"
                     className="w-full h-80 object-cover"
-                    src="https://place-hold.it/600x400"
+                    src="https://via.placeholder.com/600x400"
                     width={600}
                     height={400}
                   />
@@ -72,10 +71,10 @@ const VideoTestimonialSection = () => {
               <div className="space-y-6">
                 <div className="bg-white rounded-xl p-6 shadow-sm border-2 transition-all duration-300 cursor-pointer border-blue-300 shadow-lg">
                   <div className="flex items-start gap-4">
-                    <Image
+                    <img
                       alt="Sarah Johnson profile"
                       className="w-12 h-12 rounded-full object-cover"
-                      src="https://place-hold.it/64x64"
+                      src="https://via.placeholder.com/64x64"
                       width={64}
                       height={64}
                     />
@@ -186,10 +185,10 @@ const VideoTestimonialSection = () => {
                 </div>
                 <div className="bg-white rounded-xl p-6 shadow-sm border-2 transition-all duration-300 cursor-pointer border-gray-200 hover:border-gray-300">
                   <div className="flex items-start gap-4">
-                    <Image
+                    <img
                       alt="Michael Chen profile"
                       className="w-12 h-12 rounded-full object-cover"
-                      src="https://place-hold.it/64x64"
+                      src="https://via.placeholder.com/64x64"
                       width={64}
                       height={64}
                     />
@@ -300,10 +299,10 @@ const VideoTestimonialSection = () => {
                 </div>
                 <div className="bg-white rounded-xl p-6 shadow-sm border-2 transition-all duration-300 cursor-pointer border-gray-200 hover:border-gray-300">
                   <div className="flex items-start gap-4">
-                    <Image
+                    <img
                       alt="Lisa Rodriguez profile"
                       className="w-12 h-12 rounded-full object-cover"
-                      src="https://place-hold.it/64x64"
+                      src="https://via.placeholder.com/64x64"
                       width={64}
                       height={64}
                     />
@@ -410,22 +409,6 @@ const VideoTestimonialSection = () => {
                         </div>
                       </div>
                     </div>
-                  </div>
-                </div>
-              </div>
-              <div className="mt-8 p-6 bg-blue-50 rounded-xl">
-                <div className="flex items-center justify-between">
-                  <div className="text-center">
-                    <div className="text-2xl font-bold text-blue-600">4.9/5</div>
-                    <div className="text-sm text-gray-600">Average Rating</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-2xl font-bold text-blue-600">500+</div>
-                    <div className="text-sm text-gray-600">Happy Customers</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-2xl font-bold text-blue-600">99%</div>
-                    <div className="text-sm text-gray-600">Would Recommend</div>
                   </div>
                 </div>
               </div>
