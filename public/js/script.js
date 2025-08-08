@@ -9,9 +9,10 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     // Hero Section
-    sr.reveal('.text-5xl', { delay: 300 });
-    sr.reveal('p.text-xl', { delay: 400 });
-    sr.reveal('.flex-col.sm\\:flex-row.gap-4', { delay: 500 });
+    sr.reveal('.text-5xl', { delay: 300, origin: 'left' });
+    sr.reveal('p.text-xl', { delay: 400, origin: 'left' });
+    sr.reveal('.flex-col.sm\\:flex-row.gap-4', { delay: 500, origin: 'left' });
+    sr.reveal('.hero-right-column', { delay: 300, origin: 'right' });
 
     // Benefits Section
     sr.reveal('#benefits .group', { interval: 150 });
