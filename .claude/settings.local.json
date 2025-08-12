@@ -4,7 +4,13 @@
       "Bash(rm:*)",
       "Bash(yarn install)",
       "Bash(npm install:*)",
-      "Bash(npm run build:*)"
+      "Bash(npm run build:*)",
+      "Bash(mkdir:*)",
+      "Bash(npm uninstall:*)",
+      "Bash(pkill:*)",
+      "Bash(true)",
+      "Bash(find:*)",
+      "Bash(npm run dev:*)"
     ],
     "deny": []
   }

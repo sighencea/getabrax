@@ -2,77 +2,80 @@
 
 import * as React from "react";
 import { motion } from "framer-motion";
+import { useTranslation } from 'react-i18next';
+import { LanguageSwitcher } from './LanguageSwitcher';
 export interface FooterProps {}
 export default function Footer({}: FooterProps) {
+  const { t } = useTranslation('common');
   const currentYear = new Date().getFullYear();
   const footerLinks = {
     product: [{
-      label: "Features",
+      label: t('footer.sections.product.items.0'),
       href: "#benefits"
     }, {
-      label: "How It Works",
+      label: t('footer.sections.product.items.1'),
       href: "#how-it-works"
     }, {
-      label: "Pricing",
+      label: t('footer.sections.product.items.2'),
       href: "#signup"
     }, {
-      label: "API",
+      label: t('footer.sections.product.items.3'),
       href: "#"
     }],
     company: [{
-      label: "About",
+      label: t('footer.sections.company.items.0'),
       href: "#"
     }, {
-      label: "Careers",
+      label: t('footer.sections.company.items.1'),
       href: "#"
     }, {
-      label: "Press",
+      label: t('footer.sections.company.items.2'),
       href: "#"
     }, {
-      label: "Contact",
+      label: t('footer.sections.company.items.3'),
       href: "#"
     }],
     resources: [{
-      label: "Documentation",
+      label: t('footer.sections.resources.items.0'),
       href: "#"
     }, {
-      label: "Help Center",
+      label: t('footer.sections.resources.items.1'),
       href: "#"
     }, {
-      label: "Blog",
+      label: t('footer.sections.resources.items.2'),
       href: "#"
     }, {
-      label: "Community",
+      label: t('footer.sections.resources.items.3'),
       href: "#"
     }],
     legal: [{
-      label: "Privacy Policy",
+      label: t('footer.sections.legal.items.0'),
       href: "#"
     }, {
-      label: "Terms of Service",
+      label: t('footer.sections.legal.items.1'),
       href: "#"
     }, {
-      label: "Cookie Policy",
+      label: t('footer.sections.legal.items.2'),
       href: "#"
     }, {
-      label: "GDPR",
+      label: t('footer.sections.legal.items.3'),
       href: "#"
     }]
   };
   const socialLinks = [{
-    label: "Twitter",
+    label: t('footer.social.0.label'),
     href: "#",
     icon: "𝕏"
   }, {
-    label: "LinkedIn",
+    label: t('footer.social.1.label'),
     href: "#",
     icon: "in"
   }, {
-    label: "GitHub",
+    label: t('footer.social.2.label'),
     href: "#",
     icon: "⚡"
   }, {
-    label: "YouTube",
+    label: t('footer.social.3.label'),
     href: "#",
     icon: "▶"
   }] as any[];
@@ -102,10 +105,10 @@ export default function Footer({}: FooterProps) {
               duration: 0.6
             }}>
                 <h2 className="text-2xl font-bold mb-4">
-                  Abrax
+                  {t('footer.brand')}
                 </h2>
                 <p className="text-gray-400 mb-6 max-w-sm leading-relaxed">
-                  Revolutionizing property management with intelligent automation and data-driven insights.
+                  {t('footer.description')}
                 </p>
                 
                 {/* Social Links */}
@@ -136,7 +139,7 @@ export default function Footer({}: FooterProps) {
               delay: 0.1
             }}>
                 <h3 className="text-sm font-semibold text-gray-300 uppercase tracking-wider mb-4">
-                  Product
+                  {t('footer.sections.product.title')}
                 </h3>
                 <ul className="space-y-3">
                   {footerLinks.product.map((link, index) => <li key={index}>
@@ -161,7 +164,7 @@ export default function Footer({}: FooterProps) {
               delay: 0.2
             }}>
                 <h3 className="text-sm font-semibold text-gray-300 uppercase tracking-wider mb-4">
-                  Company
+                  {t('footer.sections.company.title')}
                 </h3>
                 <ul className="space-y-3">
                   {footerLinks.company.map((link, index) => <li key={index}>
@@ -186,7 +189,7 @@ export default function Footer({}: FooterProps) {
               delay: 0.3
             }}>
                 <h3 className="text-sm font-semibold text-gray-300 uppercase tracking-wider mb-4">
-                  Resources
+                  {t('footer.sections.resources.title')}
                 </h3>
                 <ul className="space-y-3">
                   {footerLinks.resources.map((link, index) => <li key={index}>
@@ -211,7 +214,7 @@ export default function Footer({}: FooterProps) {
               delay: 0.4
             }}>
                 <h3 className="text-sm font-semibold text-gray-300 uppercase tracking-wider mb-4">
-                  Legal
+                  {t('footer.sections.legal.title')}
                 </h3>
                 <ul className="space-y-3">
                   {footerLinks.legal.map((link, index) => <li key={index}>
@@ -236,7 +239,7 @@ export default function Footer({}: FooterProps) {
             duration: 0.6,
             delay: 0.5
           }} className="text-gray-400 text-sm">
-              © {currentYear} Abrax. All rights reserved.
+              {t('footer.copyright', { year: currentYear })}
             </motion.div>
             
             <motion.div initial={{
@@ -246,14 +249,15 @@ export default function Footer({}: FooterProps) {
           }} transition={{
             duration: 0.6,
             delay: 0.6
-          }} className="flex items-center space-x-6">
-              <span className="text-gray-400 text-sm">
-                Made with ❤️ for property managers
+          }} className="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-6">
+              <LanguageSwitcher />
+              <span className="text-gray-400 text-sm text-center sm:text-left">
+                {t('footer.tagline')}
               </span>
               <div className="flex items-center space-x-2">
                 <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
                 <span className="text-gray-400 text-sm">
-                  All systems operational
+                  {t('footer.status')}
                 </span>
               </div>
             </motion.div>

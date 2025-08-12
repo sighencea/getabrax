@@ -1,0 +1,308 @@
+{
+  "navigation": {
+    "brand": "Abrax",
+    "menuItems": [
+      "Funktionen",
+      "So funktioniert's",
+      "Bewertungen",
+      "Preise"
+    ],
+    "buttons": [
+      "Anmelden",
+      "Kostenlos loslegen"
+    ]
+  },
+  "hero": {
+    "badge": "🚀 Vertraut von 500+ Immobilienverwaltern",
+    "headline": "{{highlight}}kosten um 40% reduzieren",
+    "headlineHighlight": "Instandhaltungs",
+    "subheading": "Optimieren Sie Arbeitsaufträge, automatisieren Sie Terminplanung und erhalten Sie vollständige Transparenz über Ihre Immobilien-Instandhaltung mit unserer All-in-One-Plattform.",
+    "buttons": [
+      "Kostenlose Testversion starten",
+      "Demo buchen"
+    ],
+    "features": [
+      "Keine Kreditkarte erforderlich",
+      "14-tägige kostenlose Testversion",
+      "Einrichtung in 5 Minuten"
+    ],
+    "dashboard": {
+      "title": "PropertyMaintenance Pro",
+      "workOrders": {
+        "labels": ["Arbeitsauftrag #1247", "Arbeitsauftrag #1248", "Arbeitsauftrag #1249"],
+        "descriptions": ["Klimaanlagen-Wartung - Einheit 4B", "Sanitärreparatur - Einheit 2A", "Elektrische Prüfung - Einheit 1C"],
+        "statuses": ["Abgeschlossen", "In Bearbeitung", "Geplant"]
+      },
+      "savings": "Monatliche Einsparungen",
+      "savingsAmount": "12.450€",
+      "savingsDescription": "↑ 40% Kostenreduzierung"
+    },
+    "floatingStats": [
+      "Zufriedene Kunden",
+      "Kostenreduzierung"
+    ]
+  },
+  "benefits": {
+    "title": "Warum Immobilienverwalter uns wählen",
+    "subtitle": "Transformieren Sie Ihre Instandhaltungsabläufe mit leistungsstarken Funktionen, die speziell für Immobilienverwaltungsprofis entwickelt wurden.",
+    "items": [
+      {
+        "title": "15+ Stunden wöchentlich sparen",
+        "description": "Automatisieren Sie die Erstellung von Arbeitsaufträgen, Terminplanung und Lieferantenkommunikation, um sich auf strategische Entscheidungen zu konzentrieren."
+      },
+      {
+        "title": "Kosten um 40% reduzieren",
+        "description": "Verhindern Sie teure Notfallreparaturen mit vorausschauender Wartung und optimierten Lieferantenpreisen."
+      },
+      {
+        "title": "Echtzeit-Analytics",
+        "description": "Erhalten Sie sofortige Einblicke in Wartungstrends, Kosten und Leistung über alle Immobilien hinweg."
+      },
+      {
+        "title": "Compliance sicherstellen",
+        "description": "Bleiben Sie compliant mit Sicherheitsvorschriften und führen Sie automatisch detaillierte Prüfpfade."
+      },
+      {
+        "title": "Lieferantenmanagement",
+        "description": "Zentralisieren Sie Lieferantenbeziehungen, verfolgen Sie Leistung und verhandeln Sie bessere Preise mit Daten."
+      },
+      {
+        "title": "Mobile-First Design",
+        "description": "Verwalten Sie Immobilien unterwegs mit unserer intuitiven mobilen App für iOS und Android."
+      },
+      {
+        "title": "Intelligente Terminplanung",
+        "description": "KI-gesteuerte Terminplanung optimiert Technikerrouten und minimiert Störungen für Mieter."
+      },
+      {
+        "title": "Digitale Dokumentation",
+        "description": "Speichern Sie Fotos, Belege und Berichte an einem Ort mit automatischer Organisation."
+      }
+    ],
+    "stats": {
+      "labels": [
+        "Verwaltete Immobilien",
+        "Durchschnittliche Kostenreduzierung",
+        "Wöchentliche Zeiteinsparung",
+        "Plattform-Verfügbarkeit"
+      ],
+      "values": [
+        "500+",
+        "40%",
+        "15std",
+        "99,9%"
+      ]
+    }
+  },
+  "testimonials": {
+    "videoSection": {
+      "title": "Sehen Sie, wie es funktioniert",
+      "subtitle": "Schauen Sie sich eine 2-minütige Demo unserer Plattform in Aktion an",
+      "loadingText": "Lade Demo-Video...",
+      "altText": "Demo des Immobilien-Instandhaltungs-Dashboards",
+      "stats": [
+        {
+          "value": "2min",
+          "label": "Schnelle Demo"
+        },
+        {
+          "value": "5min",
+          "label": "Einrichtungszeit"
+        },
+        {
+          "value": "24/7",
+          "label": "Support"
+        }
+      ]
+    },
+    "section": {
+      "title": "Was unsere Kunden sagen",
+      "subtitle": "Schließen Sie sich Hunderten von Immobilienverwaltern an, die ihre Abläufe transformiert haben"
+    },
+    "testimonials": [
+      {
+        "name": "Sarah Johnson",
+        "title": "Immobilienverwalter",
+        "company": "Metro Properties",
+        "quote": "Diese Plattform hat revolutioniert, wie wir Wartung handhaben. Wir haben unsere Reaktionszeit um 60% verkürzt und unsere Mieter sind zufriedener denn je.",
+        "altText": "Sarah Johnson Profil"
+      },
+      {
+        "name": "Michael Chen",
+        "title": "Betriebsleiter",
+        "company": "Urban Living Group",
+        "quote": "Die Kosteneinsparungen waren unglaublich. Wir haben unser Wartungsbudget um 40% reduziert und dabei tatsächlich die Servicequalität verbessert.",
+        "altText": "Michael Chen Profil"
+      },
+      {
+        "name": "Lisa Rodriguez",
+        "title": "Portfolio-Manager",
+        "company": "Residential Plus",
+        "quote": "Die mobile App ist ein Game-Changer. Ich kann Arbeitsaufträge von überall aus verwalten und alle unsere Immobilien in Echtzeit verfolgen.",
+        "altText": "Lisa Rodriguez Profil"
+      }
+    ],
+    "trustIndicators": {
+      "labels": [
+        "Durchschnittsbewertung",
+        "Zufriedene Kunden",
+        "Würden empfehlen"
+      ],
+      "values": [
+        "4,9/5",
+        "500+",
+        "99%"
+      ]
+    }
+  },
+  "signup": {
+    "title": "Starten Sie heute Ihre kostenlose Testversion",
+    "subtitle": "Schließen Sie sich 500+ Immobilienverwaltern an, die Wartungskosten um 40% reduziert haben. Keine Kreditkarte erforderlich, Einrichtung dauert weniger als 5 Minuten.",
+    "benefitsTitle": "Was Sie mit Ihrer kostenlosen Testversion erhalten:",
+    "benefits": [
+      "Vollständiger Zugang zu allen Premium-Funktionen",
+      "Unbegrenzte Arbeitsaufträge und Immobilien",
+      "Mobile App für iOS und Android",
+      "Echtzeit-Analytics und Berichte",
+      "Prioritäts-Kundensupport",
+      "Keine Einrichtungsgebühren oder versteckten Kosten"
+    ],
+    "quickSetup": {
+      "title": "🎯 Schnelle Einrichtungsgarantie",
+      "description": "Wir bringen Sie in unter 5 Minuten zum Laufen. Unser Onboarding-Team führt Sie persönlich durch den Einrichtungsprozess."
+    },
+    "form": {
+      "fields": {
+        "fullName": {
+          "label": "Vollständiger Name",
+          "placeholder": "Geben Sie Ihren vollständigen Namen ein"
+        },
+        "email": {
+          "label": "Geschäftliche E-Mail",
+          "placeholder": "ihre@firma.de"
+        },
+        "company": {
+          "label": "Firmenname",
+          "placeholder": "Ihr Firmenname"
+        },
+        "password": {
+          "label": "Passwort",
+          "placeholder": "Erstellen Sie ein sicheres Passwort",
+          "helpText": "Muss mindestens 8 Zeichen lang sein"
+        }
+      },
+      "checkbox": "Ich möchte Setup-Tipps und bewährte Praktiken per E-Mail erhalten (Sie können sich jederzeit abmelden)",
+      "submitButton": "Mein kostenloses Konto erstellen",
+      "loadingButton": "Konto wird erstellt...",
+      "legalText": "Durch die Erstellung eines Kontos stimmen Sie unseren {{termsLink}} und {{privacyLink}} zu. Keine Kreditkarte für Ihre 14-tägige kostenlose Testversion erforderlich.",
+      "links": {
+        "terms": "Nutzungsbedingungen",
+        "privacy": "Datenschutzerklärung"
+      }
+    },
+    "validation": {
+      "fullNameRequired": "Vollständiger Name ist erforderlich",
+      "emailRequired": "E-Mail ist erforderlich",
+      "emailInvalid": "Bitte geben Sie eine gültige E-Mail-Adresse ein",
+      "companyRequired": "Firmenname ist erforderlich",
+      "passwordRequired": "Passwort ist erforderlich",
+      "passwordTooShort": "Passwort muss mindestens 8 Zeichen haben"
+    },
+    "successMessage": "Konto erfolgreich erstellt! Überprüfen Sie Ihre E-Mail für die nächsten Schritte."
+  },
+  "howItWorks": {
+    "title": "So funktioniert's",
+    "subtitle": "Starten Sie in Minuten mit unserem einfachen dreistufigen Prozess",
+    "steps": [
+      {
+        "step": "01",
+        "title": "Anmelden & Einrichten",
+        "description": "Erstellen Sie Ihr Konto und fügen Sie Ihre Immobilien in unter 5 Minuten hinzu"
+      },
+      {
+        "step": "02",
+        "title": "Planen & Verfolgen",
+        "description": "Richten Sie Wartungspläne ein und verfolgen Sie Arbeitsaufträge automatisch"
+      },
+      {
+        "step": "03",
+        "title": "Optimieren & Skalieren",
+        "description": "Nutzen Sie Erkenntnisse, um Kosten zu reduzieren und Ihre Abläufe effizient zu skalieren"
+      }
+    ]
+  },
+  "socialProof": {
+    "description": "Vertraut von 500+ Immobilienverwaltungsunternehmen",
+    "companies": [
+      "PropertyCorp",
+      "RealEstate Pro",
+      "BuildingMax",
+      "PropTech",
+      "ManagePlus",
+      "PropertyHub"
+    ]
+  },
+  "finalCta": {
+    "title": "Bereit, Ihre Immobilienverwaltung zu transformieren?",
+    "subtitle": "Schließen Sie sich Hunderten von Immobilienverwaltern an, die Wartungskosten um 40% reduziert haben",
+    "button": "Starten Sie heute Ihre kostenlose Testversion"
+  },
+  "stickyMobile": {
+    "button": "Kostenlos loslegen"
+  },
+  "footer": {
+    "brand": "Abrax",
+    "description": "Revolutionierung der Immobilienverwaltung mit intelligenter Automatisierung und datengesteuerten Erkenntnissen.",
+    "sections": {
+      "product": {
+        "title": "Produkt",
+        "links": [
+          "Funktionen",
+          "So funktioniert's",
+          "Preise",
+          "API"
+        ]
+      },
+      "company": {
+        "title": "Unternehmen",
+        "links": [
+          "Über uns",
+          "Karriere",
+          "Presse",
+          "Kontakt"
+        ]
+      },
+      "resources": {
+        "title": "Ressourcen",
+        "links": [
+          "Dokumentation",
+          "Hilfezentrum",
+          "Blog",
+          "Community"
+        ]
+      },
+      "legal": {
+        "title": "Rechtliches",
+        "links": [
+          "Datenschutzerklärung",
+          "Nutzungsbedingungen",
+          "Cookie-Richtlinie",
+          "DSGVO"
+        ]
+      }
+    },
+    "social": {
+      "ariaLabels": [
+        "Twitter",
+        "LinkedIn",
+        "GitHub",
+        "YouTube"
+      ]
+    },
+    "bottom": {
+      "copyright": "© {{year}} Abrax. Alle Rechte vorbehalten.",
+      "tagline": "Mit ❤️ für Immobilienverwalter entwickelt",
+      "status": "Alle Systeme funktionsfähig"
+    }
+  }
+}

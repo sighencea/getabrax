@@ -2,6 +2,7 @@
 
 import * as React from "react";
 import { motion } from "framer-motion";
+import { useTranslation } from 'react-i18next';
 export interface NavigationProps {
   onGetStarted?: () => void;
   onSignIn?: () => void;
@@ -10,6 +11,7 @@ export default function Navigation({
   onGetStarted,
   onSignIn
 }: NavigationProps) {
+  const { t } = useTranslation('common');
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     element?.scrollIntoView({
@@ -18,16 +20,16 @@ export default function Navigation({
     });
   };
   const menuItems = [{
-    label: 'Features',
+    label: t('navigation.menuItems.0'),
     href: '#benefits'
   }, {
-    label: 'How It Works',
+    label: t('navigation.menuItems.1'),
     href: '#how-it-works'
   }, {
-    label: 'Testimonials',
+    label: t('navigation.menuItems.2'),
     href: '#testimonials'
   }, {
-    label: 'Pricing',
+    label: t('navigation.menuItems.3'),
     href: '#signup'
   }] as any[];
   return <nav className="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm border-b border-gray-200 z-40">
@@ -36,7 +38,7 @@ export default function Navigation({
           {/* Logo */}
           <div className="flex-shrink-0">
             <h1 className="text-2xl font-bold text-gray-900">
-              Abrax
+              {t('navigation.brand')}
             </h1>
           </div>
 
@@ -52,14 +54,14 @@ export default function Navigation({
           {/* CTA Buttons */}
           <div className="flex items-center space-x-4">
             <button onClick={onSignIn} className="hidden sm:inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-lg text-gray-700 bg-white hover:bg-gray-50 transition-colors duration-200">
-              Sign In
+              {t('navigation.buttons.0')}
             </button>
             <motion.button whileHover={{
             scale: 1.02
           }} whileTap={{
             scale: 0.98
           }} onClick={onGetStarted} className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-lg text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200">
-              Get Started for Free
+              {t('navigation.buttons.1')}
             </motion.button>
           </div>
         </div>

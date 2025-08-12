@@ -1,40 +1,44 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Clock, DollarSign, BarChart3, Shield, Users, Smartphone, Calendar, FileText } from 'lucide-react';
-const benefits = [{
-  icon: Clock,
-  title: 'Save 15+ Hours Weekly',
-  description: 'Automate work order creation, scheduling, and vendor communication to focus on strategic decisions.'
-}, {
-  icon: DollarSign,
-  title: 'Reduce Costs by 40%',
-  description: 'Prevent costly emergency repairs with predictive maintenance and optimized vendor pricing.'
-}, {
-  icon: BarChart3,
-  title: 'Real-Time Analytics',
-  description: 'Get instant insights into maintenance trends, costs, and performance across all properties.'
-}, {
-  icon: Shield,
-  title: 'Ensure Compliance',
-  description: 'Stay compliant with safety regulations and maintain detailed audit trails automatically.'
-}, {
-  icon: Users,
-  title: 'Vendor Management',
-  description: 'Centralize vendor relationships, track performance, and negotiate better rates with data.'
-}, {
-  icon: Smartphone,
-  title: 'Mobile-First Design',
-  description: 'Manage properties on-the-go with our intuitive mobile app for iOS and Android.'
-}, {
-  icon: Calendar,
-  title: 'Smart Scheduling',
-  description: 'AI-powered scheduling optimizes technician routes and minimizes tenant disruption.'
-}, {
-  icon: FileText,
-  title: 'Digital Documentation',
-  description: 'Store photos, receipts, and reports in one place with automatic organization.'
-}] as any[];
+import { useTranslation } from 'react-i18next';
+
 export const BenefitsGrid: React.FC = () => {
+  const { t } = useTranslation('common');
+
+  const benefits = [{
+    icon: Clock,
+    title: t('benefits.items.0.title'),
+    description: t('benefits.items.0.description')
+  }, {
+    icon: DollarSign,
+    title: t('benefits.items.1.title'),
+    description: t('benefits.items.1.description')
+  }, {
+    icon: BarChart3,
+    title: t('benefits.items.2.title'),
+    description: t('benefits.items.2.description')
+  }, {
+    icon: Shield,
+    title: t('benefits.items.3.title'),
+    description: t('benefits.items.3.description')
+  }, {
+    icon: Users,
+    title: t('benefits.items.4.title'),
+    description: t('benefits.items.4.description')
+  }, {
+    icon: Smartphone,
+    title: t('benefits.items.5.title'),
+    description: t('benefits.items.5.description')
+  }, {
+    icon: Calendar,
+    title: t('benefits.items.6.title'),
+    description: t('benefits.items.6.description')
+  }, {
+    icon: FileText,
+    title: t('benefits.items.7.title'),
+    description: t('benefits.items.7.description')
+  }] as any[];
   return <section className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
@@ -48,11 +52,10 @@ export const BenefitsGrid: React.FC = () => {
           duration: 0.6
         }}>
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Why Property Managers Choose Us
+              {t('benefits.title')}
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Transform your maintenance operations with powerful features designed 
-              specifically for property management professionals.
+              {t('benefits.subtitle')}
             </p>
           </motion.div>
         </div>
@@ -102,20 +105,20 @@ export const BenefitsGrid: React.FC = () => {
       }} className="mt-20 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 md:p-12">
           <div className="grid md:grid-cols-4 gap-8 text-center">
             <div>
-              <div className="text-4xl font-bold text-white mb-2">500+</div>
-              <div className="text-blue-100">Properties Managed</div>
+              <div className="text-4xl font-bold text-white mb-2">{t('benefits.stats.0.value')}</div>
+              <div className="text-blue-100">{t('benefits.stats.0.label')}</div>
             </div>
             <div>
-              <div className="text-4xl font-bold text-white mb-2">40%</div>
-              <div className="text-blue-100">Average Cost Reduction</div>
+              <div className="text-4xl font-bold text-white mb-2">{t('benefits.stats.1.value')}</div>
+              <div className="text-blue-100">{t('benefits.stats.1.label')}</div>
             </div>
             <div>
-              <div className="text-4xl font-bold text-white mb-2">15hrs</div>
-              <div className="text-blue-100">Weekly Time Savings</div>
+              <div className="text-4xl font-bold text-white mb-2">{t('benefits.stats.2.value')}</div>
+              <div className="text-blue-100">{t('benefits.stats.2.label')}</div>
             </div>
             <div>
-              <div className="text-4xl font-bold text-white mb-2">99.9%</div>
-              <div className="text-blue-100">Platform Uptime</div>
+              <div className="text-4xl font-bold text-white mb-2">{t('benefits.stats.3.value')}</div>
+              <div className="text-blue-100">{t('benefits.stats.3.label')}</div>
             </div>
           </div>
         </motion.div>
