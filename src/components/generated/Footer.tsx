@@ -3,9 +3,7 @@
 import * as React from "react";
 import { motion } from "framer-motion";
 export interface FooterProps {}
-export default function Footer({
-  mpid
-}: FooterProps) {
+export default function Footer({}: FooterProps) {
   const currentYear = new Date().getFullYear();
   const footerLinks = {
     product: [{
