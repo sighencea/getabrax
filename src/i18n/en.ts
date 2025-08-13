@@ -9,17 +9,17 @@ export default {
     ],
     buttons: [
       "Sign In",
-      "Get Started for Free"
+      "Sign up for free"
     ]
   },
   hero: {
-    badge: "🚀 Trusted by 500+ Property Managers",
+    badge: "🚀 Trusted by 450+ Property Managers",
     headlinePart1: "Cut Property",
     headlinePart2: "Maintenance",
     headlinePart3: "Costs by 40%",
     subheading: "Streamline work orders, automate scheduling, and gain complete visibility into your property maintenance operations with our all-in-one platform.",
     buttons: [
-      "Start Free Trial",
+      "Sign up for free",
       "Book a Demo"
     ],
     features: [
@@ -40,7 +40,7 @@ export default {
     },
     floatingStats: [
       {
-        value: "500+",
+        value: "450+",
         label: "Happy Clients"
       },
       {
@@ -88,7 +88,7 @@ export default {
     ],
     stats: [
       {
-        value: "500+",
+        value: "775+",
         label: "Properties Managed"
       },
       {
@@ -155,11 +155,11 @@ export default {
     ],
     trustIndicators: [
       {
-        value: "4.9/5",
+        value: "4.6/5",
         label: "Average Rating"
       },
       {
-        value: "500+",
+        value: "450+",
         label: "Happy Customers"
       },
       {
@@ -169,8 +169,8 @@ export default {
     ]
   },
   signup: {
-    title: "Start Your Free Beta Trial",
-    subtitle: "Join our beta program and get full access during testing phase. After beta: stay on free plan with basic features or upgrade at a discount as an early supporter.",
+    title: "Sign up for free!",
+    subtitle: "Join our beta program and get full free access during testing phase. After beta: Stay on free plan enjoying basic features or upgrade at a discount as an early supporter.",
     benefits: {
       title: "What you'll get:",
       items: [
@@ -183,8 +183,8 @@ export default {
       ]
     },
     cta: {
-      button: "Start Beta Trial",
-      description: "Sign up at abrax.app"
+      button: "Sign up for free",
+      description: "You will be directed to abrax.app to sign up"
     }
   },
   howItWorks: {
@@ -209,7 +209,7 @@ export default {
     ]
   },
   socialProof: {
-    description: "Trusted by 500+ property management companies",
+    description: "Trusted by 450+ property management companies",
     companies: {
       0: "PropertyCorp",
       1: "RealEstate Pro",
@@ -222,7 +222,7 @@ export default {
   finalCta: {
     title: "Ready to Transform Your Property Management?",
     subtitle: "Join hundreds of property managers who've reduced maintenance costs by 40%",
-    button: "Start Your Free Trial Today"
+    button: "Sign up for free"
   },
   stickyMobile: {
     button: "Get Started Free"
@@ -235,7 +235,7 @@ export default {
   },
   footer: {
     brand: "Abrax",
-    description: "Revolutionizing property management with intelligent automation and data-driven insights.",
+    description: "Simplyfying Property Maintenance Management. Abrax cuts admin time by managing properties, tasks, and client jobs in one platform!",
     sections: {
       product: {
         title: "Product",

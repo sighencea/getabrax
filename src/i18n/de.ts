@@ -9,17 +9,17 @@ export default {
     ],
     buttons: [
       "Anmelden",
-      "Kostenlos loslegen"
+      "Kostenlos registrieren"
     ]
   },
   hero: {
-    badge: "🚀 Vertraut von 500+ Immobilienverwaltern",
+    badge: "🚀 Vertraut von 450+ Immobilienverwaltern",
     headlinePart1: "",
     headlinePart2: "Instandhaltungs",
     headlinePart3: "kosten um 40% reduzieren",
     subheading: "Optimieren Sie Arbeitsaufträge, automatisieren Sie Terminplanung und erhalten Sie vollständige Transparenz über Ihre Immobilien-Instandhaltung mit unserer All-in-One-Plattform.",
     buttons: [
-      "Kostenlose Testversion starten",
+      "Kostenlos Registrieren",
       "Demo buchen"
     ],
     features: [
@@ -40,7 +40,7 @@ export default {
     },
     floatingStats: [
       {
-        value: "500+",
+        value: "450+",
         label: "Zufriedene Kunden"
       },
       {
@@ -88,7 +88,7 @@ export default {
     ],
     stats: [
       {
-        value: "500+",
+        value: "775+",
         label: "Verwaltete Immobilien"
       },
       {
@@ -155,11 +155,11 @@ export default {
     ],
     trustIndicators: [
       {
-        value: "4,9/5",
+        value: "4,6/5",
         label: "Durchschnittsbewertung"
       },
       {
-        value: "500+",
+        value: "450+",
         label: "Zufriedene Kunden"
       },
       {
@@ -169,8 +169,8 @@ export default {
     ]
   },
   signup: {
-    title: "Starten Sie Ihre kostenlose Beta-Testversion",
-    subtitle: "Werden Sie Teil unseres Beta-Programms mit vollständigem Zugang während der Testphase. Nach der Beta: Bleiben Sie beim kostenlosen Plan oder upgraden Sie mit Rabatt als früher Unterstützer.",
+    title: "Kostenfrei anmelden!",
+    subtitle: "Werden Sie Teil unseres Beta-Programms mit vollständigem und freiem Zugang während der Testphase. Nach der Beta: Bleiben Sie beim kostenlosen Plan oder upgraden Sie mit Rabatt als früher Unterstützer.",
     benefits: {
       title: "Was Sie erhalten:",
       items: [
@@ -183,8 +183,8 @@ export default {
       ]
     },
     cta: {
-      button: "Beta-Testversion starten",
-      description: "Registrierung auf abrax.app"
+      button: "Kostenlos registrieren",
+      description: "Sie werden für die Registrierung zu abrax.app weitergeileitet"
     }
   },
   howItWorks: {
@@ -209,7 +209,7 @@ export default {
     ]
   },
   socialProof: {
-    description: "Vertraut von 500+ Immobilienverwaltungsunternehmen",
+    description: "Vertraut von 450+ Immobilienverwaltungsunternehmen",
     companies: {
       0: "PropertyCorp",
       1: "RealEstate Pro", 
@@ -222,7 +222,7 @@ export default {
   finalCta: {
     title: "Bereit, Ihre Immobilienverwaltung zu transformieren?",
     subtitle: "Schließen Sie sich Hunderten von Immobilienverwaltern an, die Wartungskosten um 40% reduziert haben",
-    button: "Starten Sie heute Ihre kostenlose Testversion"
+    button: "Kostenlos registrieren"
   },
   stickyMobile: {
     button: "Kostenlos loslegen"
@@ -235,7 +235,7 @@ export default {
   },
   footer: {
     brand: "Abrax",
-    description: "Revolutionierung der Immobilienverwaltung mit intelligenter Automatisierung und datengesteuerten Erkenntnissen.",
+    description: "Vereinfachte Immobilienverwaltung.Abrax reduziert den Verwaltungsaufwand, indem es Immobilien, Aufgaben und Kundenaufträge in einer einzigen Plattform verwaltet!",
     sections: {
       product: {
         title: "Produkt",
