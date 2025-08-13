@@ -3,6 +3,7 @@
 import * as React from "react";
 import { motion } from "framer-motion";
 import { useTranslation } from 'react-i18next';
+import { useNavigate, useLocation } from 'react-router-dom';
 export interface NavigationProps {
   onGetStarted?: () => void;
   onSignIn?: () => void;
@@ -12,12 +13,23 @@ export default function Navigation({
   onSignIn
 }: NavigationProps) {
   const { t } = useTranslation('common');
+  const navigate = useNavigate();
+  const location = useLocation();
+  
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
-    element?.scrollIntoView({
-      behavior: 'smooth',
-      block: 'start'
-    });
+    if (element) {
+      // If element exists on current page, scroll to it
+      element.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    } else {
+      // If element doesn't exist, navigate to landing page with section state
+      if (location.pathname !== '/') {
+        navigate('/', { state: { scrollToSection: sectionId } });
+      }
+    }
   };
   const menuItems = [{
     label: t('navigation.menuItems.0'),
@@ -37,9 +49,12 @@ export default function Navigation({
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <h1 className="text-2xl font-bold text-gray-900">
+            <button 
+              onClick={() => window.location.href = '/'}
+              className="text-2xl font-bold text-gray-900 hover:text-blue-600 transition-colors"
+            >
               {t('navigation.brand')}
-            </h1>
+            </button>
           </div>
 
           {/* Desktop Menu Items */}

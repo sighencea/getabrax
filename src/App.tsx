@@ -12,6 +12,7 @@ import { PrivacyPolicyPage } from './components/pages/PrivacyPolicyPage';
 import { TermsOfServicePage } from './components/pages/TermsOfServicePage';
 import { CookiePolicyPage } from './components/pages/CookiePolicyPage';
 import { GdprPage } from './components/pages/GdprPage';
+import { ScrollToTop } from './components/utils/ScrollToTop';
 
 let theme: Theme = 'light';
 // only use 'centered' container for standalone components, never for full page apps or websites.
@@ -31,6 +32,7 @@ function App() {
   const appContent = useMemo(() => {
     return (
       <Router>
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="/about" element={<AboutPage />} />

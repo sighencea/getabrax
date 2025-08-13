@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
+import { useLocation } from 'react-router-dom';
 import Navigation from './Navigation';
 import { HeroSection } from './HeroSection';
 import { BenefitsGrid } from './BenefitsGrid';
@@ -10,7 +11,9 @@ import Footer from './Footer';
 import { StickyLanguageFooter } from './StickyLanguageFooter';
 export const LandingPage: React.FC = () => {
   const { t } = useTranslation('common');
+  const location = useLocation();
   const [showStickyMobile, setShowStickyMobile] = useState(false);
+  
   useEffect(() => {
     const handleScroll = () => {
       const scrolled = window.scrollY > 800;
@@ -21,8 +24,27 @@ export const LandingPage: React.FC = () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
+
+  // Handle navigation state for section scrolling
+  useEffect(() => {
+    const state = location.state as { scrollToSection?: string } | null;
+    if (state?.scrollToSection) {
+      // Wait a bit for the page to render, then scroll to the section
+      const timer = setTimeout(() => {
+        const element = document.getElementById(state.scrollToSection);
+        if (element) {
+          element.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      }, 300); // Slightly longer delay to ensure components are mounted
+      
+      return () => clearTimeout(timer);
+    }
+  }, [location.state]);
   const scrollToSignup = () => {
-    const signupSection = document.getElementById('signup-section');
+    const signupSection = document.getElementById('signup');
     signupSection?.scrollIntoView({
       behavior: 'smooth'
     });

@@ -3,11 +3,13 @@
 import * as React from "react";
 import { motion } from "framer-motion";
 import { useTranslation } from 'react-i18next';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { LanguageSwitcher } from './LanguageSwitcher';
 export interface FooterProps {}
 export default function Footer({}: FooterProps) {
   const { t } = useTranslation('common');
+  const navigate = useNavigate();
+  const location = useLocation();
   const currentYear = new Date().getFullYear();
   const footerLinks = {
     product: [{
@@ -96,11 +98,20 @@ export default function Footer({}: FooterProps) {
   }] as any[];
   const scrollToSection = (sectionId: string) => {
     if (sectionId.startsWith('#')) {
-      const element = document.getElementById(sectionId.substring(1));
-      element?.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start'
-      });
+      const targetSectionId = sectionId.substring(1);
+      const element = document.getElementById(targetSectionId);
+      if (element) {
+        // If element exists on current page, scroll to it
+        element.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      } else {
+        // If element doesn't exist, navigate to landing page with section state
+        if (location.pathname !== '/') {
+          navigate('/', { state: { scrollToSection: targetSectionId } });
+        }
+      }
     }
   };
   return <footer className="bg-gray-900 text-white">
@@ -113,15 +124,18 @@ export default function Footer({}: FooterProps) {
               <motion.div initial={{
               opacity: 0,
               y: 20
-            }} whileInView={{
+            }} animate={{
               opacity: 1,
               y: 0
             }} transition={{
               duration: 0.6
             }}>
-                <h2 className="text-2xl font-bold mb-4">
+                <button 
+                  onClick={() => window.location.href = '/'}
+                  className="text-2xl font-bold mb-4 hover:text-blue-400 transition-colors text-left"
+                >
                   {t('footer.brand')}
-                </h2>
+                </button>
                 <p className="text-gray-400 mb-6 max-w-sm leading-relaxed">
                   {t('footer.description')}
                 </p>
@@ -146,7 +160,7 @@ export default function Footer({}: FooterProps) {
               <motion.div initial={{
               opacity: 0,
               y: 20
-            }} whileInView={{
+            }} animate={{
               opacity: 1,
               y: 0
             }} transition={{
@@ -185,7 +199,7 @@ export default function Footer({}: FooterProps) {
               <motion.div initial={{
               opacity: 0,
               y: 20
-            }} whileInView={{
+            }} animate={{
               opacity: 1,
               y: 0
             }} transition={{
@@ -224,7 +238,7 @@ export default function Footer({}: FooterProps) {
               <motion.div initial={{
               opacity: 0,
               y: 20
-            }} whileInView={{
+            }} animate={{
               opacity: 1,
               y: 0
             }} transition={{
@@ -267,7 +281,7 @@ export default function Footer({}: FooterProps) {
               <motion.div initial={{
               opacity: 0,
               y: 20
-            }} whileInView={{
+            }} animate={{
               opacity: 1,
               y: 0
             }} transition={{
@@ -308,7 +322,7 @@ export default function Footer({}: FooterProps) {
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <motion.div initial={{
             opacity: 0
-          }} whileInView={{
+          }} animate={{
             opacity: 1
           }} transition={{
             duration: 0.6,
@@ -319,7 +333,7 @@ export default function Footer({}: FooterProps) {
             
             <motion.div initial={{
             opacity: 0
-          }} whileInView={{
+          }} animate={{
             opacity: 1
           }} transition={{
             duration: 0.6,
