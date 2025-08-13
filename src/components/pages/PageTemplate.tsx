@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import Navigation from '../generated/Navigation';
 import Footer from '../generated/Footer';
 import { StickyLanguageFooter } from '../generated/StickyLanguageFooter';
+import { BackToTop } from '../utils/BackToTop';
 
 interface PageTemplateProps {
   children: React.ReactNode;
@@ -41,6 +42,7 @@ export const PageTemplate: React.FC<PageTemplateProps> = ({ children, className 
 
         <Footer />
         <StickyLanguageFooter />
+        <BackToTop />
       </div>
     );
   }
@@ -64,6 +66,7 @@ export const PageTemplate: React.FC<PageTemplateProps> = ({ children, className 
 
       <Footer />
       <StickyLanguageFooter />
+      <BackToTop />
     </div>
   );
 };

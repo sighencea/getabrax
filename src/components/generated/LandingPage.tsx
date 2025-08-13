@@ -9,6 +9,7 @@ import { VideoTestimonialSection } from './VideoTestimonialSection';
 import { SignupFormSection } from './SignupFormSection';
 import Footer from './Footer';
 import { StickyLanguageFooter } from './StickyLanguageFooter';
+import { BackToTop } from '../utils/BackToTop';
 export const LandingPage: React.FC = () => {
   const { t } = useTranslation('common');
   const location = useLocation();
@@ -28,10 +29,11 @@ export const LandingPage: React.FC = () => {
   // Handle navigation state for section scrolling
   useEffect(() => {
     const state = location.state as { scrollToSection?: string } | null;
-    if (state?.scrollToSection) {
+    const targetSection = state?.scrollToSection;
+    if (targetSection) {
       // Wait a bit for the page to render, then scroll to the section
       const timer = setTimeout(() => {
-        const element = document.getElementById(state.scrollToSection);
+        const element = document.getElementById(targetSection);
         if (element) {
           element.scrollIntoView({
             behavior: 'smooth',
@@ -165,6 +167,9 @@ export const LandingPage: React.FC = () => {
 
         {/* Sticky Language Footer */}
         <StickyLanguageFooter />
+
+        {/* Back to Top */}
+        <BackToTop />
       </div>
     </div>;
 };
