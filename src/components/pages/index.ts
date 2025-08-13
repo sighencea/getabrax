@@ -1,0 +1,11 @@
+export { AboutPage } from './AboutPage';
+export { CareersPage } from './CareersPage';
+export { ContactPage } from './ContactPage';
+export { PressPage } from './PressPage';
+export { DocumentationPage } from './DocumentationPage';
+export { HelpCenterPage } from './HelpCenterPage';
+export { PrivacyPolicyPage } from './PrivacyPolicyPage';
+export { TermsOfServicePage } from './TermsOfServicePage';
+export { CookiePolicyPage } from './CookiePolicyPage';
+export { GdprPage } from './GdprPage';
+export { PageTemplate } from './PageTemplate';

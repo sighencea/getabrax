@@ -242,8 +242,7 @@ export default {
         items: [
           "Funktionen",
           "So funktioniert's",
-          "Preise",
-          "API"
+          "Preise"
         ]
       },
       company: {
@@ -262,7 +261,8 @@ export default {
           "Hilfezentrum",
           "Blog",
           "Community"
-        ]
+        ],
+        greyedOut: [2, 3]
       },
       legal: {
         title: "Rechtliches",
@@ -291,5 +291,101 @@ export default {
     copyright: "© {{year}} Abrax. Alle Rechte vorbehalten.",
     tagline: "Mit ❤️ für Immobilienverwalter entwickelt",
     status: "Alle Systeme funktionsfähig"
+  },
+  pages: {
+    about: {
+      title: "Über Abrax",
+      headline: "Bei Abrax machen wir die Immobilienwartung mühelos.",
+      description: "Unsere All-in-One-Plattform hilft Agenturen, Verwaltern und Außendienstteams dabei, Immobilien zu verwalten, Aufgaben zuzuweisen und Kunden auf dem Laufenden zu halten — alles an einem Ort.",
+      painPoints: "Keine Tabellen, endlose E-Mails oder verpasste Jobs mehr. Nur optimierte Arbeitsabläufe, zufriedene Kunden und mehr Zeit für das Wesentliche.",
+      brand: "Abrax",
+      tagline: "Immobilienwartung, vereinfacht",
+      features: {
+        propertyManagement: {
+          title: "Immobilienverwaltung",
+          description: "Zentralisierte Immobilienübersicht"
+        },
+        teamCoordination: {
+          title: "Teamkoordination",
+          description: "Nahtlose Zusammenarbeit im Außendienst"
+        },
+        taskManagement: {
+          title: "Aufgabenverwaltung",
+          description: "Automatisierte Workflow-Optimierung"
+        }
+      },
+      oldWay: {
+        title: "Der alte Weg",
+        items: [
+          "Endlose Tabellen",
+          "Verpasste Wartungsarbeiten",
+          "E-Mail-Überlastung",
+          "Frustrierte Kunden"
+        ]
+      },
+      abraxWay: {
+        title: "Der Abrax-Weg",
+        items: [
+          "Optimierte Arbeitsabläufe",
+          "Zufriedene Kunden",
+          "Mehr Zeit für das Wesentliche",
+          "Mühelose Wartung"
+        ]
+      },
+      cta: "Kostenlos registrieren"
+    },
+    careers: {
+      title: "Karriere",
+      content: "Wir suchen derzeit nicht aktiv nach neuen Teammitgliedern, sind aber immer offen für außergewöhnliche Talente. Wenn Sie sich für Immobilienverwaltungstechnologie begeistern, können Sie gerne eine Bewerbung einreichen.",
+      form: {
+        name: "Vollständiger Name",
+        email: "E-Mail-Adresse",
+        position: "Position von Interesse",
+        message: "Warum möchten Sie Abrax beitreten?",
+        submit: "Bewerbung senden"
+      },
+      successMessage: "Formular gesendet! Funktionalität wird bald hinzugefügt."
+    },
+    press: {
+      title: "Presse",
+      content: "Pressemitteilungen und Medienressourcen werden bald hier verfügbar sein."
+    },
+    contact: {
+      title: "Kontakt",
+      content: "Nehmen Sie Kontakt mit unserem Team auf. Wir würden gerne von Ihnen hören.",
+      form: {
+        name: "Name",
+        email: "E-Mail",
+        company: "Unternehmen",
+        subject: "Betreff",
+        message: "Nachricht",
+        submit: "Nachricht senden"
+      },
+      successMessage: "Nachricht gesendet! Funktionalität wird bald hinzugefügt."
+    },
+    documentation: {
+      title: "Dokumentation",
+      content: "Umfassende Dokumentation für unsere Plattform wird bald hier verfügbar sein."
+    },
+    helpCenter: {
+      title: "Hilfezentrum",
+      content: "Support-Ressourcen und häufig gestellte Fragen werden bald hier verfügbar sein."
+    },
+    privacyPolicy: {
+      title: "Datenschutzerklärung",
+      content: "Unsere Datenschutzerklärung wird bald hier veröffentlicht."
+    },
+    termsOfService: {
+      title: "Nutzungsbedingungen",
+      content: "Unsere Nutzungsbedingungen werden bald hier veröffentlicht."
+    },
+    cookiePolicy: {
+      title: "Cookie-Richtlinie",
+      content: "Unsere Cookie-Richtlinie wird bald hier veröffentlicht."
+    },
+    gdpr: {
+      title: "DSGVO-Konformität",
+      content: "Informationen über unsere DSGVO-Konformität werden bald hier verfügbar sein."
+    }
   }
 };

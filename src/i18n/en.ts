@@ -242,8 +242,7 @@ export default {
         items: [
           "Features",
           "How It Works",
-          "Pricing",
-          "API"
+          "Pricing"
         ]
       },
       company: {
@@ -262,7 +261,8 @@ export default {
           "Help Center",
           "Blog",
           "Community"
-        ]
+        ],
+        greyedOut: [2, 3]
       },
       legal: {
         title: "Legal",
@@ -291,5 +291,101 @@ export default {
     copyright: "© {{year}} Abrax. All rights reserved.",
     tagline: "Made with ❤️ for property managers",
     status: "All systems operational"
+  },
+  pages: {
+    about: {
+      title: "About Abrax",
+      headline: "At Abrax, we make property maintenance effortless.",
+      description: "Our all-in-one platform helps agencies, managers, and field teams manage properties, assign tasks, and keep clients updated — all in one place.",
+      painPoints: "No more spreadsheets, endless emails, or missed jobs. Just streamlined workflows, happy clients, and more time for what matters.",
+      brand: "Abrax",
+      tagline: "Property maintenance, simplified",
+      features: {
+        propertyManagement: {
+          title: "Property Management",
+          description: "Centralized property oversight"
+        },
+        teamCoordination: {
+          title: "Team Coordination",
+          description: "Seamless field team collaboration"
+        },
+        taskManagement: {
+          title: "Task Management",
+          description: "Automated workflow optimization"
+        }
+      },
+      oldWay: {
+        title: "The Old Way",
+        items: [
+          "Endless spreadsheets",
+          "Missed maintenance jobs",
+          "Email overload",
+          "Frustrated clients"
+        ]
+      },
+      abraxWay: {
+        title: "The Abrax Way",
+        items: [
+          "Streamlined workflows",
+          "Happy clients",
+          "More time for what matters",
+          "Effortless maintenance"
+        ]
+      },
+      cta: "Sign up for free"
+    },
+    careers: {
+      title: "Careers",
+      content: "We are not actively looking for new team members at this time, but we're always open to exceptional talent. If you're passionate about property management technology, feel free to submit an application.",
+      form: {
+        name: "Full Name",
+        email: "Email Address",
+        position: "Position of Interest",
+        message: "Why do you want to join Abrax?",
+        submit: "Submit Application"
+      },
+      successMessage: "Form submitted! Functionality will be added soon."
+    },
+    press: {
+      title: "Press",
+      content: "Press releases and media resources will be available here soon."
+    },
+    contact: {
+      title: "Contact Us",
+      content: "Get in touch with our team. We'd love to hear from you.",
+      form: {
+        name: "Name",
+        email: "Email",
+        company: "Company",
+        subject: "Subject",
+        message: "Message",
+        submit: "Send Message"
+      },
+      successMessage: "Message sent! Functionality will be added soon."
+    },
+    documentation: {
+      title: "Documentation",
+      content: "Comprehensive documentation for our platform will be available here soon."
+    },
+    helpCenter: {
+      title: "Help Center",
+      content: "Support resources and frequently asked questions will be available here soon."
+    },
+    privacyPolicy: {
+      title: "Privacy Policy",
+      content: "Our privacy policy will be published here soon."
+    },
+    termsOfService: {
+      title: "Terms of Service",
+      content: "Our terms of service will be published here soon."
+    },
+    cookiePolicy: {
+      title: "Cookie Policy",
+      content: "Our cookie policy will be published here soon."
+    },
+    gdpr: {
+      title: "GDPR Compliance",
+      content: "Information about our GDPR compliance will be available here soon."
+    }
   }
 };

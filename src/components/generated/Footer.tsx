@@ -3,6 +3,7 @@
 import * as React from "react";
 import { motion } from "framer-motion";
 import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
 import { LanguageSwitcher } from './LanguageSwitcher';
 export interface FooterProps {}
 export default function Footer({}: FooterProps) {
@@ -11,55 +12,69 @@ export default function Footer({}: FooterProps) {
   const footerLinks = {
     product: [{
       label: t('footer.sections.product.items.0'),
-      href: "#benefits"
+      href: "#benefits",
+      isScrollLink: true
     }, {
       label: t('footer.sections.product.items.1'),
-      href: "#how-it-works"
+      href: "#how-it-works",
+      isScrollLink: true
     }, {
       label: t('footer.sections.product.items.2'),
-      href: "#signup"
-    }, {
-      label: t('footer.sections.product.items.3'),
-      href: "#"
+      href: "#signup",
+      isScrollLink: true
     }],
     company: [{
       label: t('footer.sections.company.items.0'),
-      href: "#"
+      href: "/about",
+      isScrollLink: false
     }, {
       label: t('footer.sections.company.items.1'),
-      href: "#"
+      href: "/careers",
+      isScrollLink: false
     }, {
       label: t('footer.sections.company.items.2'),
-      href: "#"
+      href: "/press",
+      isScrollLink: false
     }, {
       label: t('footer.sections.company.items.3'),
-      href: "#"
+      href: "/contact",
+      isScrollLink: false
     }],
     resources: [{
       label: t('footer.sections.resources.items.0'),
-      href: "#"
+      href: "/documentation",
+      isScrollLink: false
     }, {
       label: t('footer.sections.resources.items.1'),
-      href: "#"
+      href: "/help-center",
+      isScrollLink: false
     }, {
       label: t('footer.sections.resources.items.2'),
-      href: "#"
+      href: "#",
+      isScrollLink: false,
+      isGreyedOut: true
     }, {
       label: t('footer.sections.resources.items.3'),
-      href: "#"
+      href: "#",
+      isScrollLink: false,
+      isGreyedOut: true
     }],
     legal: [{
       label: t('footer.sections.legal.items.0'),
-      href: "#"
+      href: "/privacy-policy",
+      isScrollLink: false
     }, {
       label: t('footer.sections.legal.items.1'),
-      href: "#"
+      href: "/terms-of-service",
+      isScrollLink: false
     }, {
       label: t('footer.sections.legal.items.2'),
-      href: "#"
+      href: "/cookie-policy",
+      isScrollLink: false
     }, {
       label: t('footer.sections.legal.items.3'),
-      href: "#"
+      href: "/gdpr",
+      isScrollLink: false
     }]
   };
   const socialLinks = [{
@@ -142,11 +157,25 @@ export default function Footer({}: FooterProps) {
                   {t('footer.sections.product.title')}
                 </h3>
                 <ul className="space-y-3">
-                  {footerLinks.product.map((link, index) => <li key={index}>
-                      <button onClick={() => scrollToSection(link.href)} className="text-gray-400 hover:text-white transition-colors duration-200 text-sm">
-                        {link.label}
-                      </button>
-                    </li>)}
+                  {footerLinks.product.map((link, index) => (
+                    <li key={index}>
+                      {link.isScrollLink ? (
+                        <button 
+                          onClick={() => scrollToSection(link.href)} 
+                          className="text-gray-400 hover:text-white transition-colors duration-200 text-sm"
+                        >
+                          {link.label}
+                        </button>
+                      ) : (
+                        <Link 
+                          to={link.href}
+                          className="text-gray-400 hover:text-white transition-colors duration-200 text-sm"
+                        >
+                          {link.label}
+                        </Link>
+                      )}
+                    </li>
+                  ))}
                 </ul>
               </motion.div>
             </div>
@@ -167,11 +196,25 @@ export default function Footer({}: FooterProps) {
                   {t('footer.sections.company.title')}
                 </h3>
                 <ul className="space-y-3">
-                  {footerLinks.company.map((link, index) => <li key={index}>
-                      <a href={link.href} className="text-gray-400 hover:text-white transition-colors duration-200 text-sm">
-                        {link.label}
-                      </a>
-                    </li>)}
+                  {footerLinks.company.map((link, index) => (
+                    <li key={index}>
+                      {link.isScrollLink ? (
+                        <button 
+                          onClick={() => scrollToSection(link.href)} 
+                          className="text-gray-400 hover:text-white transition-colors duration-200 text-sm"
+                        >
+                          {link.label}
+                        </button>
+                      ) : (
+                        <Link 
+                          to={link.href}
+                          className="text-gray-400 hover:text-white transition-colors duration-200 text-sm"
+                        >
+                          {link.label}
+                        </Link>
+                      )}
+                    </li>
+                  ))}
                 </ul>
               </motion.div>
             </div>
@@ -192,11 +235,29 @@ export default function Footer({}: FooterProps) {
                   {t('footer.sections.resources.title')}
                 </h3>
                 <ul className="space-y-3">
-                  {footerLinks.resources.map((link, index) => <li key={index}>
-                      <a href={link.href} className="text-gray-400 hover:text-white transition-colors duration-200 text-sm">
-                        {link.label}
-                      </a>
-                    </li>)}
+                  {footerLinks.resources.map((link, index) => (
+                    <li key={index}>
+                      {link.isGreyedOut ? (
+                        <span className="text-gray-600 text-sm cursor-not-allowed">
+                          {link.label}
+                        </span>
+                      ) : link.isScrollLink ? (
+                        <button 
+                          onClick={() => scrollToSection(link.href)} 
+                          className="text-gray-400 hover:text-white transition-colors duration-200 text-sm"
+                        >
+                          {link.label}
+                        </button>
+                      ) : (
+                        <Link 
+                          to={link.href}
+                          className="text-gray-400 hover:text-white transition-colors duration-200 text-sm"
+                        >
+                          {link.label}
+                        </Link>
+                      )}
+                    </li>
+                  ))}
                 </ul>
               </motion.div>
             </div>
@@ -217,11 +278,25 @@ export default function Footer({}: FooterProps) {
                   {t('footer.sections.legal.title')}
                 </h3>
                 <ul className="space-y-3">
-                  {footerLinks.legal.map((link, index) => <li key={index}>
-                      <a href={link.href} className="text-gray-400 hover:text-white transition-colors duration-200 text-sm">
-                        {link.label}
-                      </a>
-                    </li>)}
+                  {footerLinks.legal.map((link, index) => (
+                    <li key={index}>
+                      {link.isScrollLink ? (
+                        <button 
+                          onClick={() => scrollToSection(link.href)} 
+                          className="text-gray-400 hover:text-white transition-colors duration-200 text-sm"
+                        >
+                          {link.label}
+                        </button>
+                      ) : (
+                        <Link 
+                          to={link.href}
+                          className="text-gray-400 hover:text-white transition-colors duration-200 text-sm"
+                        >
+                          {link.label}
+                        </Link>
+                      )}
+                    </li>
+                  ))}
                 </ul>
               </motion.div>
             </div>
