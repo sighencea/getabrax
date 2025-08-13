@@ -226,7 +226,7 @@ export default {
     button: "Kostenlos registrieren"
   },
   stickyMobile: {
-    button: "Kostenlos loslegen"
+    button: "Kostenlos registrieren"
   },
   languageSwitcher: {
     languages: {

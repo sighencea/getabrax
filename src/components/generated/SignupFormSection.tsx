@@ -99,7 +99,7 @@ export const SignupFormSection: React.FC = () => {
             className="text-center"
           >
             <motion.a
-              href="https://abrax.app"
+              href="https://www.abrax.app/?view=signup"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{

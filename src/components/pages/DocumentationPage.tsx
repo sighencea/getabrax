@@ -247,7 +247,7 @@ export const DocumentationPage: React.FC = () => {
                       </p>
                     </div>
                     <motion.a
-                      href="https://abrax.app"
+                      href="https://www.abrax.app/?view=signup"
                       target="_blank"
                       rel="noopener noreferrer"
                       whileHover={{ scale: 1.05 }}

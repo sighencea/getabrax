@@ -226,7 +226,7 @@ export default {
     button: "Sign up for free"
   },
   stickyMobile: {
-    button: "Get Started Free"
+    button: "Sign up for free"
   },
   languageSwitcher: {
     languages: {

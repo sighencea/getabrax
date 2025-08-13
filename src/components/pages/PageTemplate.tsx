@@ -17,18 +17,10 @@ export const PageTemplate: React.FC<PageTemplateProps> = ({ children, className 
   const { t } = useTranslation('common');
   const navigate = useNavigate();
 
-  const scrollToSignup = () => {
-    // Navigate to landing page and scroll to signup section
-    navigate('/', { state: { scrollToSection: 'signup' } });
-  };
-
   if (stickyFooter) {
     return (
       <div className="min-h-screen bg-gray-50 flex flex-col">
-        <Navigation 
-          onGetStarted={scrollToSignup}
-          onSignIn={() => window.open('https://abrax.app', '_blank')}
-        />
+        <Navigation />
         
         <main className={`pt-16 flex-1 ${className}`}>
           <motion.div
@@ -49,10 +41,7 @@ export const PageTemplate: React.FC<PageTemplateProps> = ({ children, className 
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <Navigation 
-        onGetStarted={scrollToSignup}
-        onSignIn={() => window.open('https://abrax.app', '_blank')}
-      />
+      <Navigation />
       
       <main className={`pt-16 ${className}`}>
         <motion.div

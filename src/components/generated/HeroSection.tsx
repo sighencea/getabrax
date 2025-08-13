@@ -2,12 +2,9 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Play, CheckCircle } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
-interface HeroSectionProps {
-  onStartTrial: () => void;
-}
-export const HeroSection: React.FC<HeroSectionProps> = ({
-  onStartTrial
-}) => {
+interface HeroSectionProps {}
+
+export const HeroSection: React.FC<HeroSectionProps> = ({}) => {
   const { t } = useTranslation('common');
   
   return <section className="relative overflow-hidden bg-gradient-to-br from-blue-50 to-indigo-100 pt-20 pb-32">
@@ -41,13 +38,17 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 mb-8">
-              <motion.button whileHover={{
-              scale: 1.05
-            }} whileTap={{
-              scale: 0.95
-            }} onClick={onStartTrial} className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-700 transition-colors shadow-lg">
+              <motion.a 
+                href="https://www.abrax.app/?view=signup"
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{
+                scale: 1.05
+              }} whileTap={{
+                scale: 0.95
+              }} className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-700 transition-colors shadow-lg inline-block text-center">
                 {t('hero.buttons.0')}
-              </motion.button>
+              </motion.a>
               
               <motion.button whileHover={{
               scale: 1.05

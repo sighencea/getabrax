@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { useLocation } from 'react-router-dom';
+import { useNavigation } from '../context/NavigationContext';
 import Navigation from './Navigation';
 import { HeroSection } from './HeroSection';
 import { BenefitsGrid } from './BenefitsGrid';
@@ -13,6 +14,7 @@ import { BackToTop } from '../utils/BackToTop';
 export const LandingPage: React.FC = () => {
   const { t } = useTranslation('common');
   const location = useLocation();
+  const { isMobileMenuOpen } = useNavigation();
   const [showStickyMobile, setShowStickyMobile] = useState(false);
   
   useEffect(() => {
@@ -45,20 +47,14 @@ export const LandingPage: React.FC = () => {
       return () => clearTimeout(timer);
     }
   }, [location.state]);
-  const scrollToSignup = () => {
-    const signupSection = document.getElementById('signup');
-    signupSection?.scrollIntoView({
-      behavior: 'smooth'
-    });
-  };
   return <div className="min-h-screen bg-white">
       {/* Navigation */}
-      <Navigation onGetStarted={scrollToSignup} />
+      <Navigation />
 
       {/* Add padding top to account for fixed navigation */}
       <div className="pt-16">
         {/* Hero Section */}
-        <HeroSection onStartTrial={scrollToSignup} />
+        <HeroSection />
 
         {/* Benefits Grid */}
         <section id="benefits">
@@ -141,25 +137,33 @@ export const LandingPage: React.FC = () => {
             <p className="text-xl text-blue-100 mb-8">
               {t('finalCta.subtitle')}
             </p>
-            <motion.button whileHover={{
-            scale: 1.05
-          }} whileTap={{
-            scale: 0.95
-          }} onClick={scrollToSignup} className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-50 transition-colors">
+            <motion.a 
+              href="https://www.abrax.app/?view=signup"
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{
+              scale: 1.05
+            }} whileTap={{
+              scale: 0.95
+            }} className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-50 transition-colors inline-block">
               {t('finalCta.button')}
-            </motion.button>
+            </motion.a>
           </div>
         </section>
 
         {/* Sticky Mobile CTA */}
-        {showStickyMobile && <motion.div initial={{
+        {showStickyMobile && !isMobileMenuOpen && <motion.div initial={{
         y: 100
       }} animate={{
         y: 0
       }} className="fixed bottom-0 left-0 right-0 bg-blue-600 p-4 z-50 md:hidden">
-            <button onClick={scrollToSignup} className="w-full bg-white text-blue-600 py-3 rounded-lg font-semibold">
+            <a 
+              href="https://www.abrax.app/?view=signup"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block w-full bg-white text-blue-600 py-3 rounded-lg font-semibold text-center">
               {t('stickyMobile.button')}
-            </button>
+            </a>
           </motion.div>}
 
         {/* Footer */}
