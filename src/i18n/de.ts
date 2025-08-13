@@ -1,12 +1,13 @@
 export default {
   navigation: {
     brand: "Abrax",
-    menuItems: [
-      "Funktionen",
-      "So funktioniert's",
-      "Bewertungen",
-      "Preise"
-    ],
+    menuItems: {
+      home: "Start",
+      0: "Funktionen",
+      1: "So funktioniert's",
+      2: "Bewertungen",
+      3: "Preise"
+    },
     buttons: [
       "Anmelden",
       "Kostenlos registrieren"
