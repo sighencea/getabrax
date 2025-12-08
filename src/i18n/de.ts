@@ -3,7 +3,7 @@ export default {
     brand: "Abrax",
     menuItems: {
       home: "Start",
-      0: "Funktionen",
+      0: "Vorteile",
       1: "So funktioniert's",
       2: "Bewertungen",
       3: "Preise"
@@ -188,6 +188,42 @@ export default {
       description: "Sie werden für die Registrierung zu abrax.app weitergeileitet"
     }
   },
+  pricing: {
+    title: "Einfache, transparente Preise",
+    subtitle: "Starten Sie kostenlos während unserer Beta-Phase. Sichern Sie sich exklusive Vorteile als früher Unterstützer.",
+    beta: {
+      badge: "Beta-Zugang",
+      price: "KOSTENLOS",
+      duration: "während der Testphase",
+      cta: "Jetzt Beta beitreten",
+      benefits: [
+        "Vollzugang zu allen Funktionen",
+        "Unbegrenzte Immobilien & Arbeitsaufträge",
+        "Echtzeit-Synchronisation auf allen Geräten",
+        "Mobile App für iOS & Android",
+        "Prioritätssupport als Beta-Tester",
+        "Exklusiver Frühbucher-Rabatt beim Launch"
+      ]
+    },
+    pro: {
+      badge: "Demnächst",
+      price: "49€",
+      duration: "lebenslanger Zugang",
+      cta: "Demnächst",
+      benefits: [
+        "Alles aus der Beta",
+        "Alle zukünftigen Updates inklusive",
+        "Erweiterte Analysen & Berichte",
+        "API-Zugang für Integrationen",
+        "Persönlicher Ansprechpartner"
+      ]
+    },
+    trustSignals: [
+      "Keine Kreditkarte erforderlich",
+      "Einrichtung in 5 Minuten",
+      "Jederzeit kündbar"
+    ]
+  },
   howItWorks: {
     title: "So funktioniert's",
     subtitle: "Starten Sie in Minuten mit unserem einfachen dreistufigen Prozess",
@@ -241,7 +277,7 @@ export default {
       product: {
         title: "Produkt",
         items: [
-          "Funktionen",
+          "Vorteile",
           "So funktioniert's",
           "Preise"
         ]

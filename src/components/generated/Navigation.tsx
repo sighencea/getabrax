@@ -75,7 +75,7 @@ export default function Navigation({}: NavigationProps = {}) {
     href: '#testimonials'
   }, {
     label: t('navigation.menuItems.3'),
-    href: '#signup'
+    href: '#pricing'
   }] as any[];
 
   // Determine which menu item is active

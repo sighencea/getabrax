@@ -3,9 +3,9 @@ export default {
     brand: "Abrax",
     menuItems: {
       home: "Home",
-      0: "Features",
+      0: "Benefits",
       1: "How It Works",
-      2: "Testimonials", 
+      2: "Testimonials",
       3: "Pricing"
     },
     buttons: [
@@ -188,6 +188,42 @@ export default {
       description: "You will be directed to abrax.app to sign up"
     }
   },
+  pricing: {
+    title: "Simple, Transparent Pricing",
+    subtitle: "Start free during our beta phase. Lock in exclusive benefits as an early supporter.",
+    beta: {
+      badge: "Beta Access",
+      price: "FREE",
+      duration: "during testing phase",
+      cta: "Join Beta Now",
+      benefits: [
+        "Full access to all features",
+        "Unlimited properties & work orders",
+        "Real-time sync across devices",
+        "Mobile app for iOS & Android",
+        "Priority support as beta tester",
+        "Exclusive early-bird discount at launch"
+      ]
+    },
+    pro: {
+      badge: "Coming Soon",
+      price: "€49",
+      duration: "lifetime access",
+      cta: "Coming Soon",
+      benefits: [
+        "Everything in Beta",
+        "All future updates included",
+        "Advanced analytics & reporting",
+        "API access for integrations",
+        "Dedicated account manager"
+      ]
+    },
+    trustSignals: [
+      "No credit card required",
+      "Setup in 5 minutes",
+      "Cancel anytime"
+    ]
+  },
   howItWorks: {
     title: "How It Works",
     subtitle: "Get started in minutes with our simple three-step process",
@@ -241,7 +277,7 @@ export default {
       product: {
         title: "Product",
         items: [
-          "Features",
+          "Benefits",
           "How It Works",
           "Pricing"
         ]

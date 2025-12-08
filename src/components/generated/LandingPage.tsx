@@ -7,7 +7,7 @@ import Navigation from './Navigation';
 import { HeroSection } from './HeroSection';
 import { BenefitsGrid } from './BenefitsGrid';
 import { VideoTestimonialSection } from './VideoTestimonialSection';
-import { SignupFormSection } from './SignupFormSection';
+import { PricingSection } from './PricingSection';
 import Footer from './Footer';
 import { StickyLanguageFooter } from './StickyLanguageFooter';
 import { BackToTop } from '../utils/BackToTop';
@@ -123,9 +123,9 @@ export const LandingPage: React.FC = () => {
           </div>
         </section>
 
-        {/* Signup Form Section */}
-        <section id="signup">
-          <SignupFormSection />
+        {/* Pricing Section */}
+        <section id="pricing">
+          <PricingSection />
         </section>
 
         {/* Final CTA Banner */}
