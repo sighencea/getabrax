@@ -207,7 +207,7 @@ export default {
     },
     pro: {
       badge: "Demnächst",
-      price: "49€",
+      price: "450€",
       duration: "lebenslanger Zugang",
       cta: "Demnächst",
       benefits: [

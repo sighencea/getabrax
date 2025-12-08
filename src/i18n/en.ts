@@ -207,7 +207,7 @@ export default {
     },
     pro: {
       badge: "Coming Soon",
-      price: "€49",
+      price: "€450",
       duration: "lifetime access",
       cta: "Coming Soon",
       benefits: [
