@@ -16,11 +16,12 @@ export default {
   hero: {
     badge: "Entwickelt für echte Immobilienwartung",
     headline: "Schluss mit stundenlangem Wartungs-Verwaltungsaufwand",
-    subheading: "Abrax vereint Immobilien, Aufgaben und Außendienstteams auf einer Plattform — damit Wartung schneller erledigt wird, auch ohne Internet.",
+    subheading: "Abrax vereint Immobilien, Aufgaben und Außendienstteams auf einer Plattform. Wartung wird schneller erledigt, auch ohne Internet.",
     buttons: [
-      "Kostenlos starten — Keine Kreditkarte",
-      "60-Sekunden Demo ansehen"
+      "Kostenloses Konto erstellen",
+      "Demo buchen"
     ],
+    buttonSubtext: "Keine Kreditkarte",
     features: [
       "Keine Kreditkarte erforderlich",
       "Funktioniert offline",
@@ -60,7 +61,7 @@ export default {
     painPoints: [
       {
         title: "Verstreute Kommunikation",
-        description: "SMS, E-Mails, WhatsApp, Klebezettel — wichtige Auftragsdetails gehen täglich verloren."
+        description: "SMS, E-Mails, WhatsApp, Klebezettel. Wichtige Auftragsdetails gehen täglich verloren."
       },
       {
         title: "Keine Echtzeit-Übersicht",
@@ -68,7 +69,7 @@ export default {
       },
       {
         title: "Außenteams in Funklöchern",
-        description: "Keller, ländliche Gebiete, instabiles WLAN — Ihr Team ist genau dann offline, wenn Sie Updates brauchen."
+        description: "Keller, ländliche Gebiete, instabiles WLAN. Ihr Team ist genau dann offline, wenn Sie Updates brauchen."
       },
       {
         title: "Administration frisst den Tag",
@@ -77,8 +78,8 @@ export default {
     ]
   },
   solution: {
-    title: "Abrax behebt den Workflow — nicht nur die Symptome",
-    subtitle: "Eine Plattform für Hausverwalter und Außendienstteams — entwickelt für Arbeit überall, auch offline.",
+    title: "Abrax behebt den Workflow, nicht nur die Symptome",
+    subtitle: "Eine Plattform für Hausverwalter und Außendienstteams. Entwickelt für Arbeit überall, auch offline.",
     points: [
       "Alle Aufgaben und Immobilien in einem Dashboard",
       "Echtzeit-Sync wenn online, nahtlos offline wenn nicht",
@@ -99,7 +100,7 @@ export default {
       },
       {
         title: "Außenteams verbunden halten",
-        description: "Voller Offline-Modus bedeutet, Ihr Team bleibt produktiv — auch in Kellern, ländlichen Gebieten oder Funklöchern."
+        description: "Voller Offline-Modus bedeutet, Ihr Team bleibt produktiv, auch in Kellern, ländlichen Gebieten oder Funklöchern."
       },
       {
         title: "Alles auf einen Blick sehen",
@@ -107,7 +108,7 @@ export default {
       },
       {
         title: "Schnellere Reaktionszeiten",
-        description: "Aufträge sofort von überall zuweisen. Außenteams werden sofort benachrichtigt — kein Telefonieren nötig."
+        description: "Aufträge sofort von überall zuweisen. Außenteams werden sofort benachrichtigt. Kein Telefonieren nötig."
       },
       {
         title: "Professionelle Kunden-Updates",
@@ -223,7 +224,7 @@ export default {
         name: "Elena Kowalski",
         title: "Hausverwalterin",
         company: "City Living Properties",
-        quote: "Mein Außenteam nutzt das tatsächlich — das ist das größte Kompliment. Einfache Oberfläche, funktioniert ohne WLAN, und ich weiß endlich, was erledigt wird.",
+        quote: "Mein Außenteam nutzt das tatsächlich. Das ist das größte Kompliment. Einfache Oberfläche, funktioniert ohne WLAN, und ich weiß endlich, was erledigt wird.",
         altText: "Elena Kowalski Profil"
       },
       {
@@ -338,7 +339,7 @@ export default {
   },
   finalCta: {
     title: "Bereit, die Kontrolle über die Wartung zu übernehmen?",
-    subtitle: "Weniger Zeit mit Chaos-Management — mehr Zeit mit echter Arbeit.",
+    subtitle: "Weniger Zeit mit Chaos-Management. Mehr Zeit mit echter Arbeit.",
     button: "Heute kostenlos starten"
   },
   stickyMobile: {
@@ -352,13 +353,13 @@ export default {
   },
   footer: {
     brand: "Abrax",
-    description: "Immobilienwartung, vereinfacht. Immobilien, Aufgaben und Außenteams in einer Plattform verwalten — auch offline.",
+    description: "Immobilienwartung, vereinfacht. Immobilien, Aufgaben und Außenteams in einer Plattform verwalten, auch offline.",
     sections: {
       product: {
         title: "Produkt",
         items: [
           "Vorteile",
-          "So funktioniert's",
+          "Offline-Modus",
           "Preise"
         ]
       },
@@ -413,7 +414,7 @@ export default {
     about: {
       title: "Über Abrax",
       headline: "Bei Abrax machen wir die Immobilienwartung mühelos.",
-      description: "Unsere All-in-One-Plattform hilft Agenturen, Verwaltern und Außendienstteams dabei, Immobilien zu verwalten, Aufgaben zuzuweisen und Kunden auf dem Laufenden zu halten. Alles an einem Ort.",
+      description: "Unsere All-in-One-Plattform hilft Agenturen, Verwaltern und Außendienstteams dabei, Immobilien zu verwalten, Aufgaben zuzuweisen und Kunden auf dem Laufenden zu halten. Funktioniert überall, auch offline.",
       painPoints: "Keine Tabellen, endlose E-Mails oder verpasste Jobs mehr. Nur optimierte Arbeitsabläufe, zufriedene Kunden und mehr Zeit für das Wesentliche.",
       brand: "Abrax",
       tagline: "Immobilienwartung, vereinfacht",
@@ -444,7 +445,7 @@ export default {
         title: "Der Abrax-Weg",
         items: [
           "Optimierte Arbeitsabläufe",
-          "Zufriedene Kunden",
+          "Funktioniert offline, synchronisiert bei Verbindung",
           "Mehr Zeit für das Wesentliche",
           "Mühelose Wartung"
         ]
@@ -615,6 +616,27 @@ export default {
               }
             }
           }
+        },
+        offlineMode: {
+          title: "Offline-Modus",
+          content: {
+            title: "Offline arbeiten mit Abrax",
+            description: "Erfahren Sie, wie Abrax Sie auch ohne Internetverbindung produktiv hält. Perfekt für Keller, ländliche Gebiete und Orte mit schlechter Verbindung.",
+            subsections: {
+              howItWorks: {
+                title: "So funktioniert der Offline-Modus",
+                content: "Abrax erkennt automatisch Ihren Verbindungsstatus und wechselt nahtlos zwischen Online- und Offline-Modus. Alle Ihre Daten werden lokal auf Ihrem Gerät gespeichert, sodass Sie Immobilien anzeigen, Arbeitsaufträge erstellen und Updates erfassen können, ohne Internetverbindung."
+              },
+              syncBehavior: {
+                title: "Synchronisationsverhalten",
+                content: "Wenn Sie sich wieder mit dem Internet verbinden, synchronisiert Abrax automatisch alle Ihre Offline-Änderungen mit der Cloud. Konflikte werden intelligent behandelt, wobei Zeitstempel sicherstellen, dass die neuesten Änderungen Priorität haben. Ein Sync-Indikator zeigt den Status Ihrer Daten an."
+              },
+              bestPractices: {
+                title: "Best Practices",
+                content: "Für die beste Offline-Erfahrung: Stellen Sie sicher, dass die App vollständig geladen ist, bevor Sie offline gehen, synchronisieren Sie regelmäßig wenn verbunden, um Daten aktuell zu halten, und prüfen Sie ausstehende Uploads vor dem Abmelden. Fotos und Anhänge werden zur Übertragung eingereiht, wenn die Verbindung wiederhergestellt ist."
+              }
+            }
+          }
         }
       }
     },
@@ -648,6 +670,10 @@ export default {
           teamManagement: {
             title: "Teamverwaltung",
             description: "Teammitglieder hinzufügen und Berechtigungen"
+          },
+          offlineMode: {
+            title: "Offline-Modus",
+            description: "Arbeiten ohne Internetverbindung"
           }
         }
       },
@@ -753,6 +779,23 @@ export default {
               q3: {
                 question: "Wie verwalte ich Teammitglied-Berechtigungen?",
                 answer: "In den Team-Einstellungen klicken Sie auf ein beliebiges Teammitglied, um dessen Rolle, Immobilienzugang und spezifische Berechtigungen für verschiedene Features zu ändern."
+              }
+            }
+          },
+          offlineMode: {
+            title: "Offline-Modus",
+            questions: {
+              q1: {
+                question: "Wie funktioniert der Offline-Modus?",
+                answer: "Abrax erkennt automatisch Ihren Verbindungsstatus und wechselt bei Bedarf in den Offline-Modus. Sie können Immobilien anzeigen, Arbeitsaufträge erstellen, Updates erfassen und Fotos machen, ohne Internetverbindung. Alle Daten werden lokal auf Ihrem Gerät gespeichert."
+              },
+              q2: {
+                question: "Wann werden meine Daten synchronisiert?",
+                answer: "Ihre Daten werden automatisch synchronisiert, sobald Sie sich wieder mit dem Internet verbinden. Ein Sync-Indikator in der App zeigt den Status an. Konflikte werden mit Zeitstempeln gelöst, wobei die neuesten Änderungen Priorität haben."
+              },
+              q3: {
+                question: "Was passiert, wenn ich während der Arbeit die Verbindung verliere?",
+                answer: "Keine Daten gehen verloren. Abrax speichert alles lokal während Sie arbeiten. Wenn Ihre Verbindung zurückkehrt, werden alle Änderungen automatisch synchronisiert. Fotos und Anhänge werden zur Übertragung eingereiht, wenn die Verbindung wiederhergestellt ist."
               }
             }
           }

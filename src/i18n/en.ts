@@ -16,11 +16,12 @@ export default {
   hero: {
     badge: "Built for Real-World Property Maintenance",
     headline: "Stop Losing Hours Every Week to Maintenance Admin",
-    subheading: "Abrax brings properties, tasks, and field teams into one platform — so maintenance gets done faster, even when there's no internet.",
+    subheading: "Abrax brings properties, tasks, and field teams into one platform. Maintenance gets done faster, even when there's no internet.",
     buttons: [
-      "Start Free — No Credit Card",
-      "Watch 60-Second Demo"
+      "Create Free Account",
+      "Book Demo"
     ],
+    buttonSubtext: "No Credit Card",
     features: [
       "No credit card required",
       "Works offline",
@@ -60,7 +61,7 @@ export default {
     painPoints: [
       {
         title: "Scattered Communication",
-        description: "Texts, emails, WhatsApp, sticky notes — important job details get lost every day."
+        description: "Texts, emails, WhatsApp, sticky notes. Important job details get lost every day."
       },
       {
         title: "No Real-Time Visibility",
@@ -68,7 +69,7 @@ export default {
       },
       {
         title: "Field Teams in Dead Zones",
-        description: "Basements, rural sites, spotty WiFi — your team goes dark exactly when you need updates."
+        description: "Basements, rural sites, spotty WiFi. Your team goes dark exactly when you need updates."
       },
       {
         title: "Admin Eats Your Day",
@@ -77,8 +78,8 @@ export default {
     ]
   },
   solution: {
-    title: "Abrax Fixes the Workflow — Not Just the Symptoms",
-    subtitle: "One platform for property managers and field teams — built to work anywhere, even offline.",
+    title: "Abrax Fixes the Workflow, Not Just the Symptoms",
+    subtitle: "One platform for property managers and field teams. Built to work anywhere, even offline.",
     points: [
       "All tasks and properties in one dashboard",
       "Real-time sync when online, seamless offline when you're not",
@@ -107,7 +108,7 @@ export default {
       },
       {
         title: "Faster Response Times",
-        description: "Assign jobs instantly from anywhere. Field teams get notified immediately — no phone tag required."
+        description: "Assign jobs instantly from anywhere. Field teams get notified immediately. No phone tag required."
       },
       {
         title: "Professional Client Updates",
@@ -223,7 +224,7 @@ export default {
         name: "Elena Kowalski",
         title: "Property Manager",
         company: "City Living Properties",
-        quote: "My field team actually uses this — that's the highest compliment I can give. Simple interface, works without WiFi, and I finally know what's getting done.",
+        quote: "My field team actually uses this. That's the highest compliment I can give. Simple interface, works without WiFi, and I finally know what's getting done.",
         altText: "Elena Kowalski profile"
       },
       {
@@ -338,7 +339,7 @@ export default {
   },
   finalCta: {
     title: "Ready to Take Control of Maintenance?",
-    subtitle: "Spend less time managing chaos — and more time getting work done.",
+    subtitle: "Spend less time managing chaos. More time getting work done.",
     button: "Start Free Today"
   },
   stickyMobile: {
@@ -352,13 +353,13 @@ export default {
   },
   footer: {
     brand: "Abrax",
-    description: "Property maintenance, simplified. Manage properties, tasks, and field teams in one platform — even offline.",
+    description: "Property maintenance, simplified. Manage properties, tasks, and field teams in one platform, even offline.",
     sections: {
       product: {
         title: "Product",
         items: [
           "Benefits",
-          "How It Works",
+          "Offline Mode",
           "Pricing"
         ]
       },
@@ -413,7 +414,7 @@ export default {
     about: {
       title: "About Abrax",
       headline: "At Abrax, we make property maintenance effortless.",
-      description: "Our all-in-one platform helps agencies, managers, and field teams manage properties, assign tasks, and keep clients updated. All in one place.",
+      description: "Our all-in-one platform helps agencies, managers, and field teams manage properties, assign tasks, and keep clients updated. Works everywhere, even offline.",
       painPoints: "No more spreadsheets, endless emails, or missed jobs. Just streamlined workflows, happy clients, and more time for what matters.",
       brand: "Abrax",
       tagline: "Property maintenance, simplified",
@@ -444,7 +445,7 @@ export default {
         title: "The Abrax Way",
         items: [
           "Streamlined workflows",
-          "Happy clients",
+          "Works offline, syncs when connected",
           "More time for what matters",
           "Effortless maintenance"
         ]
@@ -615,6 +616,27 @@ export default {
               }
             }
           }
+        },
+        offlineMode: {
+          title: "Offline Mode",
+          content: {
+            title: "Working Offline with Abrax",
+            description: "Learn how Abrax keeps you productive even without an internet connection. Perfect for basements, rural sites, and areas with poor connectivity.",
+            subsections: {
+              howItWorks: {
+                title: "How Offline Mode Works",
+                content: "Abrax automatically detects your connection status and seamlessly switches between online and offline modes. All your data is stored locally on your device, allowing you to view properties, create work orders, and log updates without any internet connection."
+              },
+              syncBehavior: {
+                title: "Sync Behavior",
+                content: "When you reconnect to the internet, Abrax automatically syncs all your offline changes to the cloud. Conflicts are handled intelligently, with timestamps ensuring the most recent changes take priority. You'll see a sync indicator showing the status of your data."
+              },
+              bestPractices: {
+                title: "Best Practices",
+                content: "For the best offline experience: ensure the app is fully loaded before going offline, sync regularly when connected to keep data fresh, and check for pending uploads before logging out. Photos and attachments are queued for upload when connectivity returns."
+              }
+            }
+          }
         }
       }
     },
@@ -648,6 +670,10 @@ export default {
           teamManagement: {
             title: "Team Management",
             description: "Adding team members and permissions"
+          },
+          offlineMode: {
+            title: "Offline Mode",
+            description: "Working without internet connection"
           }
         }
       },
@@ -753,6 +779,23 @@ export default {
               q3: {
                 question: "How do I manage team member permissions?",
                 answer: "In Team Settings, click on any team member to modify their role, property access, and specific permissions for different features."
+              }
+            }
+          },
+          offlineMode: {
+            title: "Offline Mode",
+            questions: {
+              q1: {
+                question: "How does offline mode work?",
+                answer: "Abrax automatically detects your connection status and switches to offline mode when needed. You can view properties, create work orders, log updates, and capture photos without any internet connection. All data is stored locally on your device."
+              },
+              q2: {
+                question: "When does my data sync?",
+                answer: "Your data syncs automatically whenever you reconnect to the internet. You'll see a sync indicator in the app showing the status. Conflicts are resolved using timestamps, with the most recent changes taking priority."
+              },
+              q3: {
+                question: "What happens if I lose connection while working?",
+                answer: "No data is lost. Abrax saves everything locally as you work. When your connection returns, all changes sync automatically. Photos and attachments are queued and uploaded when connectivity is restored."
               }
             }
           }

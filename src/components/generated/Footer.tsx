@@ -18,11 +18,11 @@ export default function Footer({}: FooterProps) {
       isScrollLink: true
     }, {
       label: t('footer.sections.product.items.1'),
-      href: "#how-it-works",
+      href: "#offline-mode",
       isScrollLink: true
     }, {
       label: t('footer.sections.product.items.2'),
-      href: "#signup",
+      href: "#pricing",
       isScrollLink: true
     }],
     company: [{

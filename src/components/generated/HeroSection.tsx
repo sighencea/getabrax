@@ -39,9 +39,10 @@ export const HeroSection: React.FC = () => {
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-700 transition-colors shadow-lg inline-block text-center"
+                className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors shadow-lg inline-block text-center"
               >
-                {t('hero.buttons.0')}
+                <span className="block text-lg">{t('hero.buttons.0')}</span>
+                <span className="block text-sm font-normal opacity-90">{t('hero.buttonSubtext')}</span>
               </motion.a>
 
               <motion.button
