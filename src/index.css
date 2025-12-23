@@ -183,3 +183,17 @@ body {
     padding: 0;
   }
 }
+
+/* Hide scrollbar for testimonials and other scrollable elements */
+.testimonials-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

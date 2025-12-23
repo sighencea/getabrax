@@ -3,15 +3,22 @@ import { motion } from 'framer-motion';
 import { Star, Quote } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
+// Import testimonial images
+import testimonial1 from '../../assets/images/testimonials/Testimonial_01.png';
+import testimonial2 from '../../assets/images/testimonials/Testimonial_02.png';
+import testimonial3 from '../../assets/images/testimonials/Testimonial_03.png';
+
 export const VideoTestimonialSection: React.FC = () => {
   const { t } = useTranslation('common');
+
+  const testimonialImages = [testimonial1, testimonial2, testimonial3];
 
   const testimonials = [
     {
       name: t('testimonials.testimonials.0.name'),
       title: t('testimonials.testimonials.0.title'),
       company: t('testimonials.testimonials.0.company'),
-      image: '/api/placeholder/64/64',
+      image: testimonialImages[0],
       quote: t('testimonials.testimonials.0.quote'),
       rating: 5,
     },
@@ -19,7 +26,7 @@ export const VideoTestimonialSection: React.FC = () => {
       name: t('testimonials.testimonials.1.name'),
       title: t('testimonials.testimonials.1.title'),
       company: t('testimonials.testimonials.1.company'),
-      image: '/api/placeholder/64/64',
+      image: testimonialImages[1],
       quote: t('testimonials.testimonials.1.quote'),
       rating: 5,
     },
@@ -27,7 +34,7 @@ export const VideoTestimonialSection: React.FC = () => {
       name: t('testimonials.testimonials.2.name'),
       title: t('testimonials.testimonials.2.title'),
       company: t('testimonials.testimonials.2.company'),
-      image: '/api/placeholder/64/64',
+      image: testimonialImages[2],
       quote: t('testimonials.testimonials.2.quote'),
       rating: 5,
     },
@@ -52,8 +59,11 @@ export const VideoTestimonialSection: React.FC = () => {
           </p>
         </motion.div>
 
-        {/* Horizontal scrolling testimonials */}
-        <div className="flex gap-6 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-hide -mx-4 px-4">
+        {/* Testimonials - Grid on desktop, horizontal scroll on mobile */}
+        <div
+          className="testimonials-scroll flex md:grid md:grid-cols-3 gap-6 overflow-x-auto md:overflow-visible pb-4 md:pb-0 snap-x snap-mandatory md:snap-none -mx-4 px-4 md:mx-0 md:px-0"
+          style={{ scrollbarWidth: 'none', msOverflowStyle: 'none', WebkitOverflowScrolling: 'touch' }}
+        >
           {testimonials.map((testimonial, index) => (
             <motion.div
               key={index}
@@ -61,7 +71,7 @@ export const VideoTestimonialSection: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="flex-shrink-0 w-[340px] md:w-[400px] snap-center"
+              className="flex-shrink-0 w-[300px] md:w-auto snap-center"
             >
               <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-200 hover:border-blue-300 hover:shadow-lg transition-all duration-300 h-full">
                 <div className="flex items-start gap-4">

@@ -98,11 +98,15 @@ export default function Navigation({}: NavigationProps = {}) {
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
             <div className="flex-shrink-0">
-              <button 
+              <button
                 onClick={() => navigate('/')}
-                className="text-2xl font-bold text-gray-900 hover:text-blue-600 transition-colors"
+                className="hover:opacity-80 transition-opacity"
               >
-                {t('navigation.brand')}
+                <img
+                  src="/src/assets/images/logo/Abrax_logo_horizontal_alternative_dark.png"
+                  alt={t('navigation.brand')}
+                  className="h-8"
+                />
               </button>
             </div>
 
