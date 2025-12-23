@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { useTranslation } from 'react-i18next';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { LanguageSwitcher } from './LanguageSwitcher';
+import logoImage from '../../assets/images/logo/Abrax_logo_horizontal_alternative_dark.png';
 export interface FooterProps {}
 export default function Footer({}: FooterProps) {
   const { t } = useTranslation('common');
@@ -130,11 +131,15 @@ export default function Footer({}: FooterProps) {
             }} transition={{
               duration: 0.6
             }}>
-                <button 
+                <button
                   onClick={() => window.location.href = '/'}
-                  className="text-2xl font-bold mb-4 hover:text-blue-400 transition-colors text-left"
+                  className="mb-4 hover:opacity-80 transition-opacity"
                 >
-                  {t('footer.brand')}
+                  <img
+                    src={logoImage}
+                    alt={t('footer.brand')}
+                    className="h-8 brightness-0 invert"
+                  />
                 </button>
                 <p className="text-gray-400 mb-6 max-w-sm leading-relaxed">
                   {t('footer.description')}

@@ -6,6 +6,7 @@ import { useTranslation } from 'react-i18next';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import { useNavigation } from '../context/NavigationContext';
+import logoImage from '../../assets/images/logo/Abrax_logo_horizontal_alternative_dark.png';
 export interface NavigationProps {}
 
 export default function Navigation({}: NavigationProps = {}) {
@@ -103,7 +104,7 @@ export default function Navigation({}: NavigationProps = {}) {
                 className="hover:opacity-80 transition-opacity"
               >
                 <img
-                  src="/src/assets/images/logo/Abrax_logo_horizontal_alternative_dark.png"
+                  src={logoImage}
                   alt={t('navigation.brand')}
                   className="h-8"
                 />
