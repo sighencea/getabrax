@@ -69,7 +69,7 @@ export default function Navigation({}: NavigationProps = {}) {
     href: '#benefits'
   }, {
     label: t('navigation.menuItems.1'),
-    href: '#how-it-works'
+    href: '#offline-mode'
   }, {
     label: t('navigation.menuItems.2'),
     href: '#testimonials'
