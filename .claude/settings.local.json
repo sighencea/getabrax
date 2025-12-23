@@ -12,7 +12,8 @@
       "Bash(find:*)",
       "Bash(npm run dev:*)",
       "Bash(cp:*)",
-      "WebFetch(domain:www.sinest.app)"
+      "WebFetch(domain:www.sinest.app)",
+      "Bash(grep:*)"
     ],
     "deny": []
   }

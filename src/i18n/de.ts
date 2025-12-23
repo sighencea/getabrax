@@ -4,117 +4,197 @@ export default {
     menuItems: {
       home: "Start",
       0: "Vorteile",
-      1: "So funktioniert's",
+      1: "Offline-Modus",
       2: "Bewertungen",
       3: "Preise"
     },
     buttons: [
       "Anmelden",
-      "Kostenlos registrieren"
+      "Kostenlos starten"
     ]
   },
   hero: {
-    badge: "🚀 Vertraut von 450+ Immobilienverwaltern",
-    headlinePart1: "",
-    headlinePart2: "Instandhaltungs",
-    headlinePart3: "kosten um 40% reduzieren",
-    subheading: "Optimieren Sie Arbeitsaufträge, automatisieren Sie Terminplanung und erhalten Sie vollständige Transparenz über Ihre Immobilien-Instandhaltung mit unserer All-in-One-Plattform.",
+    badge: "Entwickelt für echte Immobilienwartung",
+    headline: "Schluss mit stundenlangem Wartungs-Verwaltungsaufwand",
+    subheading: "Abrax vereint Immobilien, Aufgaben und Außendienstteams auf einer Plattform — damit Wartung schneller erledigt wird, auch ohne Internet.",
     buttons: [
-      "Kostenlos Registrieren",
-      "Demo buchen"
+      "Kostenlos starten — Keine Kreditkarte",
+      "60-Sekunden Demo ansehen"
     ],
     features: [
       "Keine Kreditkarte erforderlich",
-      "14-tägige kostenlose Testversion",
+      "Funktioniert offline",
       "Einrichtung in 5 Minuten"
     ],
     dashboard: {
-      title: "PropertyMaintenance Pro",
+      title: "Abrax Dashboard",
       workOrders: {
-        labels: ["Arbeitsauftrag #1247", "Arbeitsauftrag #1248", "Arbeitsauftrag #1249"],
-        descriptions: ["Klimaanlagen-Wartung - Einheit 4B", "Sanitärreparatur - Einheit 2A", "Elektrische Prüfung - Einheit 1C"],
-        statuses: ["Abgeschlossen", "In Bearbeitung", "Geplant"]
+        labels: ["Dachinspektion", "Heizungswartung", "Sanitärreparatur"],
+        descriptions: ["Einheit 4B - Heute fällig", "Gebäude A - Geplant", "Einheit 2A - Dringend"],
+        statuses: ["Abgeschlossen", "In Bearbeitung", "Zugewiesen"]
       },
-      savings: "Monatliche Einsparungen",
-      savingsAmount: "12.450€",
-      savingsDescription: "↑ 40% Kostenreduzierung"
-    },
-    floatingStats: [
+      savings: "Diese Woche gespart",
+      savingsAmount: "12+ Stunden",
+      savingsDescription: "Weniger Admin, mehr Aktion"
+    }
+  },
+  demoPopup: {
+    title: "Demo kommt bald",
+    message: "Wir arbeiten gerade an unserem 60-Sekunden Demo-Video. Schauen Sie bald wieder vorbei!",
+    cta: "Verstanden"
+  },
+  trustLogos: {
+    title: "Vertraut von Immobilienwartungs-Teams",
+    companies: [
+      "Alpine Hausverwaltung",
+      "City Living Properties",
+      "Urban Wartung GmbH",
+      "PropertyCare Plus",
+      "FacilityFirst",
+      "BuildRight Solutions"
+    ]
+  },
+  problem: {
+    title: "Immobilienwartung wird immer noch wie 2005 betrieben",
+    subtitle: "Kommt Ihnen das bekannt vor?",
+    painPoints: [
       {
-        value: "450+",
-        label: "Zufriedene Kunden"
+        title: "Verstreute Kommunikation",
+        description: "SMS, E-Mails, WhatsApp, Klebezettel — wichtige Auftragsdetails gehen täglich verloren."
       },
       {
-        value: "40%",
-        label: "Kostenreduzierung"
+        title: "Keine Echtzeit-Übersicht",
+        description: "Sie wissen nie genau, was erledigt ist, was aussteht oder wer woran arbeitet."
+      },
+      {
+        title: "Außenteams in Funklöchern",
+        description: "Keller, ländliche Gebiete, instabiles WLAN — Ihr Team ist genau dann offline, wenn Sie Updates brauchen."
+      },
+      {
+        title: "Administration frisst den Tag",
+        description: "Stunden mit manuellem Erfassen von Aufträgen, Nachverfolgen von Updates und Beheben von Terminproblemen."
       }
     ]
   },
+  solution: {
+    title: "Abrax behebt den Workflow — nicht nur die Symptome",
+    subtitle: "Eine Plattform für Hausverwalter und Außendienstteams — entwickelt für Arbeit überall, auch offline.",
+    points: [
+      "Alle Aufgaben und Immobilien in einem Dashboard",
+      "Echtzeit-Sync wenn online, nahtlos offline wenn nicht",
+      "Aufträge zuweisen, verfolgen und abschließen ohne endloses Hin und Her"
+    ]
+  },
   benefits: {
-    title: "Warum Immobilienverwalter uns wählen",
-    subtitle: "Transformieren Sie Ihre Instandhaltungsabläufe mit leistungsstarken Funktionen, die speziell für Immobilienverwaltungsprofis entwickelt wurden.",
+    title: "Was sich mit Abrax ändert",
+    subtitle: "Echte Ergebnisse, nicht nur Features",
     items: [
       {
-        title: "15+ Stunden wöchentlich sparen",
-        description: "Automatisieren Sie die Erstellung von Arbeitsaufträgen, Terminplanung und Lieferantenkommunikation, um sich auf strategische Entscheidungen zu konzentrieren."
+        title: "15+ Stunden pro Woche zurückgewinnen",
+        description: "Schluss mit manuellem Erfassen von Aufträgen und Nachverfolgen von Updates. Abrax automatisiert die Routine, damit Sie sich auf Wichtiges konzentrieren."
       },
       {
-        title: "Kosten um 40% reduzieren",
-        description: "Verhindern Sie teure Notfallreparaturen mit vorausschauender Wartung und optimierten Lieferantenpreisen."
+        title: "Nie wieder einen Auftrag verpassen",
+        description: "Jede Aufgabe wird erfasst, zugewiesen und ist sichtbar. Keine verlorenen Anfragen oder vergessene Wartungen mehr."
       },
       {
-        title: "Echtzeit-Analytics",
-        description: "Erhalten Sie sofortige Einblicke in Wartungstrends, Kosten und Leistung über alle Immobilien hinweg."
+        title: "Außenteams verbunden halten",
+        description: "Voller Offline-Modus bedeutet, Ihr Team bleibt produktiv — auch in Kellern, ländlichen Gebieten oder Funklöchern."
       },
       {
-        title: "Compliance sicherstellen",
-        description: "Bleiben Sie compliant mit Sicherheitsvorschriften und führen Sie automatisch detaillierte Prüfpfade."
+        title: "Alles auf einen Blick sehen",
+        description: "Echtzeit-Dashboards zeigen genau, was erledigt ist, was aussteht und wer woran arbeitet."
       },
       {
-        title: "Lieferantenmanagement",
-        description: "Zentralisieren Sie Lieferantenbeziehungen, verfolgen Sie Leistung und verhandeln Sie bessere Preise mit Daten."
+        title: "Schnellere Reaktionszeiten",
+        description: "Aufträge sofort von überall zuweisen. Außenteams werden sofort benachrichtigt — kein Telefonieren nötig."
       },
       {
-        title: "Mobile-First Design",
-        description: "Verwalten Sie Immobilien unterwegs mit unserer intuitiven mobilen App für iOS und Android."
-      },
-      {
-        title: "Intelligente Terminplanung",
-        description: "KI-gesteuerte Terminplanung optimiert Technikerrouten und minimiert Störungen für Mieter."
-      },
-      {
-        title: "Digitale Dokumentation",
-        description: "Speichern Sie Fotos, Belege und Berichte an einem Ort mit automatischer Organisation."
+        title: "Professionelle Kunden-Updates",
+        description: "Halten Sie Eigentümer mit automatischen Status-Updates und Abschlussberichten informiert."
       }
     ],
     stats: [
       {
-        value: "775+",
-        label: "Verwaltete Immobilien"
+        value: "15+",
+        label: "Stunden wöchentlich gespart"
       },
       {
-        value: "40%", 
-        label: "Durchschnittliche Kostenreduzierung"
+        value: "100%",
+        label: "Offline-fähig"
       },
       {
-        value: "15std",
-        label: "Wöchentliche Zeiteinsparung"
+        value: "3x",
+        label: "Schnellere Auftragszuweisung"
       },
       {
-        value: "99,9%",
-        label: "Plattform-Verfügbarkeit"
+        value: "Null",
+        label: "Verlorene Arbeitsaufträge"
       }
     ]
+  },
+  useCases: {
+    title: "Entwickelt für echte Arbeitsweisen",
+    subtitle: "Ob im Büro oder im Außendienst",
+    personas: [
+      {
+        title: "Hausverwalter",
+        description: "Mehrere Immobilien überwachen, Aufgaben zuweisen und Abschlüsse verfolgen ohne Mikromanagement.",
+        benefits: [
+          "Dashboard-Übersicht aller Immobilien",
+          "Ein-Klick-Auftragszuweisung",
+          "Automatische Fortschrittsberichte"
+        ]
+      },
+      {
+        title: "Außendienstteams",
+        description: "Auftragsdetails abrufen, Updates erfassen und Fotos machen — auch ohne Internet.",
+        benefits: [
+          "Funktioniert 100% offline",
+          "Einfache mobile Oberfläche",
+          "Foto- & Notizerfassung"
+        ]
+      },
+      {
+        title: "Multi-Objekt-Betreiber",
+        description: "Betrieb über Gebäude hinweg skalieren ohne den Verwaltungsaufwand zu erhöhen.",
+        benefits: [
+          "Unbegrenzte Immobilien",
+          "Team-Berechtigungen",
+          "Objektübergreifende Berichte"
+        ]
+      }
+    ]
+  },
+  offlineMode: {
+    badge: "Hauptunterschied",
+    title: "Funktioniert auch ohne Internet",
+    subtitle: "Die meiste Immobilienwartung findet in Kellern, ländlichen Gebieten und Gebäuden mit schlechtem WLAN statt. Abrax funktioniert überall.",
+    features: [
+      {
+        title: "Volle Offline-Funktionalität",
+        description: "Aufträge einsehen, Updates erfassen und Fotos machen ohne Verbindung."
+      },
+      {
+        title: "Automatische Synchronisation",
+        description: "Alles synchronisiert sich nahtlos, wenn Sie wieder online sind. Kein manuelles Hochladen nötig."
+      },
+      {
+        title: "Kein Datenverlust",
+        description: "Ihre Arbeit wird lokal gespeichert und geht nie verloren, auch wenn die Verbindung mittendrin abbricht."
+      }
+    ],
+    cta: "So funktioniert der Offline-Modus"
   },
   testimonials: {
     video: {
       title: "Sehen Sie, wie es funktioniert",
-      description: "Schauen Sie sich eine 2-minütige Demo unserer Plattform in Aktion an",
+      description: "Schauen Sie sich eine kurze Demo unserer Plattform in Aktion an",
       loading: "Lade Demo-Video...",
       altText: "Demo des Immobilien-Instandhaltungs-Dashboards",
       stats: [
         {
-          value: "2min",
+          value: "60s",
           label: "Schnelle Demo"
         },
         {
@@ -128,40 +208,40 @@ export default {
       ]
     },
     section: {
-      title: "Was unsere Kunden sagen",
-      subtitle: "Schließen Sie sich Hunderten von Immobilienverwaltern an, die ihre Abläufe transformiert haben"
+      title: "Was Immobilienteams sagen",
+      subtitle: "Echtes Feedback von echten Nutzern"
     },
     testimonials: [
       {
-        name: "Sarah Johnson",
-        title: "Immobilienverwalter",
-        company: "Metro Properties",
-        quote: "Diese Plattform hat revolutioniert, wie wir Wartung handhaben. Wir haben unsere Reaktionszeit um 60% verkürzt und unsere Mieter sind zufriedener denn je.",
-        altText: "Sarah Johnson Profil"
-      },
-      {
-        name: "Michael Chen",
+        name: "Marcus Weber",
         title: "Betriebsleiter",
-        company: "Urban Living Group",
-        quote: "Die Kosteneinsparungen waren unglaublich. Wir haben unser Wartungsbudget um 40% reduziert und dabei tatsächlich die Servicequalität verbessert.",
-        altText: "Michael Chen Profil"
+        company: "Alpine Hausverwaltung",
+        quote: "Früher haben wir Stunden damit verbracht, Auftragsstatus nachzuverfolgen. Jetzt sehe ich alles in einem Dashboard. Der Offline-Modus ist ein Lebensretter für unsere ländlichen Objekte.",
+        altText: "Marcus Weber Profil"
       },
       {
-        name: "Lisa Rodriguez",
-        title: "Portfolio-Manager",
-        company: "Residential Plus",
-        quote: "Die mobile App ist ein Game-Changer. Ich kann Arbeitsaufträge von überall aus verwalten und alle unsere Immobilien in Echtzeit verfolgen.",
-        altText: "Lisa Rodriguez Profil"
+        name: "Elena Kowalski",
+        title: "Hausverwalterin",
+        company: "City Living Properties",
+        quote: "Mein Außenteam nutzt das tatsächlich — das ist das größte Kompliment. Einfache Oberfläche, funktioniert ohne WLAN, und ich weiß endlich, was erledigt wird.",
+        altText: "Elena Kowalski Profil"
+      },
+      {
+        name: "Thomas Richter",
+        title: "Wartungsleiter",
+        company: "Residential Plus GmbH",
+        quote: "Allein die Fotodokumentation hat uns vor drei Streitigkeiten mit Mietern bewahrt. Alles ist protokolliert und mit Zeitstempel versehen. Professionell und einfach zu bedienen.",
+        altText: "Thomas Richter Profil"
       }
     ],
     trustIndicators: [
       {
-        value: "4,6/5",
+        value: "4,8/5",
         label: "Durchschnittsbewertung"
       },
       {
-        value: "450+",
-        label: "Zufriedene Kunden"
+        value: "500+",
+        label: "Zufriedene Nutzer"
       },
       {
         value: "99%",
@@ -189,39 +269,39 @@ export default {
     }
   },
   pricing: {
-    title: "Einfache, transparente Preise",
-    subtitle: "Starten Sie kostenlos während unserer Beta-Phase. Sichern Sie sich exklusive Vorteile als früher Unterstützer.",
+    title: "Einfache Preise, keine Überraschungen",
+    subtitle: "Kostenlos starten, upgraden wenn Sie bereit sind.",
     beta: {
-      badge: "Beta-Zugang",
+      badge: "Kostenlos während Beta",
       price: "KOSTENLOS",
-      duration: "während der Testphase",
-      cta: "Jetzt Beta beitreten",
+      duration: "während der Beta-Testphase",
+      cta: "Jetzt kostenlos starten",
       benefits: [
         "Vollzugang zu allen Funktionen",
         "Unbegrenzte Immobilien & Arbeitsaufträge",
-        "Echtzeit-Synchronisation auf allen Geräten",
+        "Offline-Modus inklusive",
         "Mobile App für iOS & Android",
         "Prioritätssupport als Beta-Tester",
-        "Exklusiver Frühbucher-Rabatt beim Launch"
+        "Frühbucher-Preis sichern"
       ]
     },
     pro: {
-      badge: "Demnächst",
-      price: "450€",
-      duration: "lebenslanger Zugang",
+      badge: "Lebenslanger Zugang",
+      price: "95€",
+      duration: "einmalige Zahlung",
       cta: "Demnächst",
       benefits: [
-        "Alles aus der Beta",
-        "Alle zukünftigen Updates inklusive",
+        "Alles aus dem kostenlosen Plan",
+        "Alle zukünftigen Updates für immer",
         "Erweiterte Analysen & Berichte",
-        "API-Zugang für Integrationen",
-        "Persönlicher Ansprechpartner"
+        "Prioritäts-E-Mail-Support",
+        "Früher Zugang zu neuen Features"
       ]
     },
     trustSignals: [
-      "Keine Kreditkarte erforderlich",
-      "Einrichtung in 5 Minuten",
-      "Jederzeit kündbar"
+      "Keine Kreditkarte für Beta",
+      "Jederzeit kündbar",
+      "14-Tage Geld-zurück-Garantie"
     ]
   },
   howItWorks: {
@@ -246,23 +326,23 @@ export default {
     ]
   },
   socialProof: {
-    description: "Vertraut von 450+ Immobilienverwaltungsunternehmen",
+    description: "Vertraut von Immobilienwartungs-Teams",
     companies: {
-      0: "PropertyCorp",
-      1: "RealEstate Pro", 
-      2: "BuildingMax",
-      3: "PropTech",
-      4: "ManagePlus",
-      5: "PropertyHub"
+      0: "Alpine Hausverwaltung",
+      1: "City Living",
+      2: "Urban Wartung",
+      3: "PropertyCare",
+      4: "FacilityFirst",
+      5: "BuildRight"
     }
   },
   finalCta: {
-    title: "Bereit, Ihre Immobilienverwaltung zu transformieren?",
-    subtitle: "Schließen Sie sich Hunderten von Immobilienverwaltern an, die Wartungskosten um 40% reduziert haben",
-    button: "Kostenlos registrieren"
+    title: "Bereit, die Kontrolle über die Wartung zu übernehmen?",
+    subtitle: "Weniger Zeit mit Chaos-Management — mehr Zeit mit echter Arbeit.",
+    button: "Heute kostenlos starten"
   },
   stickyMobile: {
-    button: "Kostenlos registrieren"
+    button: "Kostenlos starten"
   },
   languageSwitcher: {
     languages: {
@@ -272,7 +352,7 @@ export default {
   },
   footer: {
     brand: "Abrax",
-    description: "Vereinfachte Immobilienverwaltung.Abrax reduziert den Verwaltungsaufwand, indem es Immobilien, Aufgaben und Kundenaufträge in einer einzigen Plattform verwaltet!",
+    description: "Immobilienwartung, vereinfacht. Immobilien, Aufgaben und Außenteams in einer Plattform verwalten — auch offline.",
     sections: {
       product: {
         title: "Produkt",

@@ -4,117 +4,197 @@ export default {
     menuItems: {
       home: "Home",
       0: "Benefits",
-      1: "How It Works",
+      1: "Offline Mode",
       2: "Testimonials",
       3: "Pricing"
     },
     buttons: [
       "Sign In",
-      "Sign up for free"
+      "Start Free"
     ]
   },
   hero: {
-    badge: "🚀 Trusted by 450+ Property Managers",
-    headlinePart1: "Cut Property",
-    headlinePart2: "Maintenance",
-    headlinePart3: "Costs by 40%",
-    subheading: "Streamline work orders, automate scheduling, and gain complete visibility into your property maintenance operations with our all-in-one platform.",
+    badge: "Built for Real-World Property Maintenance",
+    headline: "Stop Losing Hours Every Week to Maintenance Admin",
+    subheading: "Abrax brings properties, tasks, and field teams into one platform — so maintenance gets done faster, even when there's no internet.",
     buttons: [
-      "Sign up for free",
-      "Book a Demo"
+      "Start Free — No Credit Card",
+      "Watch 60-Second Demo"
     ],
     features: [
       "No credit card required",
-      "14-day free trial",
+      "Works offline",
       "Setup in 5 minutes"
     ],
     dashboard: {
-      title: "PropertyMaintenance Pro",
+      title: "Abrax Dashboard",
       workOrders: {
-        labels: ["Work Order #1247", "Work Order #1248", "Work Order #1249"],
-        descriptions: ["HVAC Maintenance - Unit 4B", "Plumbing Repair - Unit 2A", "Electrical Check - Unit 1C"],
-        statuses: ["Completed", "In Progress", "Scheduled"]
+        labels: ["Roof Inspection", "HVAC Service", "Plumbing Fix"],
+        descriptions: ["Unit 4B - Due Today", "Building A - Scheduled", "Unit 2A - Urgent"],
+        statuses: ["Completed", "In Progress", "Assigned"]
       },
-      savings: "Monthly Savings",
-      savingsAmount: "$12,450",
-      savingsDescription: "↑ 40% reduction in costs"
-    },
-    floatingStats: [
+      savings: "Time Saved This Week",
+      savingsAmount: "12+ Hours",
+      savingsDescription: "Less admin, more action"
+    }
+  },
+  demoPopup: {
+    title: "Demo Coming Soon",
+    message: "We're putting the finishing touches on our 60-second demo video. Check back soon!",
+    cta: "Got it"
+  },
+  trustLogos: {
+    title: "Trusted by Property Maintenance Teams",
+    companies: [
+      "Alpine Property Services",
+      "City Living Properties",
+      "Urban Maintenance Co.",
+      "PropertyCare Plus",
+      "FacilityFirst",
+      "BuildRight Solutions"
+    ]
+  },
+  problem: {
+    title: "Property Maintenance Is Still Run Like It's 2005",
+    subtitle: "Sound familiar?",
+    painPoints: [
       {
-        value: "450+",
-        label: "Happy Clients"
+        title: "Scattered Communication",
+        description: "Texts, emails, WhatsApp, sticky notes — important job details get lost every day."
       },
       {
-        value: "40%",
-        label: "Cost Reduction"
+        title: "No Real-Time Visibility",
+        description: "You never quite know what's been done, what's pending, or who's working on what."
+      },
+      {
+        title: "Field Teams in Dead Zones",
+        description: "Basements, rural sites, spotty WiFi — your team goes dark exactly when you need updates."
+      },
+      {
+        title: "Admin Eats Your Day",
+        description: "Hours spent manually logging jobs, chasing updates, and fixing scheduling conflicts."
       }
     ]
   },
+  solution: {
+    title: "Abrax Fixes the Workflow — Not Just the Symptoms",
+    subtitle: "One platform for property managers and field teams — built to work anywhere, even offline.",
+    points: [
+      "All tasks and properties in one dashboard",
+      "Real-time sync when online, seamless offline when you're not",
+      "Assign, track, and close jobs without endless back-and-forth"
+    ]
+  },
   benefits: {
-    title: "Why Property Managers Choose Us",
-    subtitle: "Transform your maintenance operations with powerful features designed specifically for property management professionals.",
+    title: "What Changes When You Use Abrax",
+    subtitle: "Real outcomes, not just features",
     items: [
       {
-        title: "Save 15+ Hours Weekly",
-        description: "Automate work order creation, scheduling, and vendor communication to focus on strategic decisions."
+        title: "Reclaim 15+ Hours Every Week",
+        description: "Stop manually logging jobs and chasing updates. Abrax automates the busywork so you focus on what matters."
       },
       {
-        title: "Reduce Costs by 40%",
-        description: "Prevent costly emergency repairs with predictive maintenance and optimized vendor pricing."
+        title: "Never Miss a Job Again",
+        description: "Every task is tracked, assigned, and visible. No more lost requests or forgotten maintenance."
       },
       {
-        title: "Real-Time Analytics",
-        description: "Get instant insights into maintenance trends, costs, and performance across all properties."
+        title: "Keep Field Teams Connected",
+        description: "Full offline mode means your team stays productive even in basements, rural areas, or dead zones."
       },
       {
-        title: "Ensure Compliance",
-        description: "Stay compliant with safety regulations and maintain detailed audit trails automatically."
+        title: "See Everything at a Glance",
+        description: "Real-time dashboards show exactly what's done, what's pending, and who's working on what."
       },
       {
-        title: "Vendor Management",
-        description: "Centralize vendor relationships, track performance, and negotiate better rates with data."
+        title: "Faster Response Times",
+        description: "Assign jobs instantly from anywhere. Field teams get notified immediately — no phone tag required."
       },
       {
-        title: "Mobile-First Design",
-        description: "Manage properties on-the-go with our intuitive mobile app for iOS and Android."
-      },
-      {
-        title: "Smart Scheduling",
-        description: "AI-powered scheduling optimizes technician routes and minimizes tenant disruption."
-      },
-      {
-        title: "Digital Documentation",
-        description: "Store photos, receipts, and reports in one place with automatic organization."
+        title: "Professional Client Updates",
+        description: "Keep property owners informed with automated status updates and completion reports."
       }
     ],
     stats: [
       {
-        value: "775+",
-        label: "Properties Managed"
+        value: "15+",
+        label: "Hours Saved Weekly"
       },
       {
-        value: "40%", 
-        label: "Average Cost Reduction"
+        value: "100%",
+        label: "Offline Capable"
       },
       {
-        value: "15hrs",
-        label: "Weekly Time Savings"
+        value: "3x",
+        label: "Faster Job Assignment"
       },
       {
-        value: "99.9%",
-        label: "Platform Uptime"
+        value: "Zero",
+        label: "Lost Work Orders"
       }
     ]
+  },
+  useCases: {
+    title: "Built for How You Actually Work",
+    subtitle: "Whether you're in the office or in the field",
+    personas: [
+      {
+        title: "Property Managers",
+        description: "Oversee multiple properties, assign tasks, and track completion without micromanaging.",
+        benefits: [
+          "Dashboard overview of all properties",
+          "One-click job assignment",
+          "Automated progress reports"
+        ]
+      },
+      {
+        title: "Field Teams",
+        description: "Get job details, log updates, and capture photos — even without internet.",
+        benefits: [
+          "Works 100% offline",
+          "Simple mobile interface",
+          "Photo & notes capture"
+        ]
+      },
+      {
+        title: "Multi-Property Operators",
+        description: "Scale operations across buildings without scaling your admin overhead.",
+        benefits: [
+          "Unlimited properties",
+          "Team permissions",
+          "Cross-property reporting"
+        ]
+      }
+    ]
+  },
+  offlineMode: {
+    badge: "Key Differentiator",
+    title: "Works When the Internet Doesn't",
+    subtitle: "Most property maintenance happens in basements, rural sites, and buildings with terrible WiFi. Abrax works everywhere.",
+    features: [
+      {
+        title: "Full Offline Functionality",
+        description: "View jobs, log updates, and capture photos without any connection."
+      },
+      {
+        title: "Automatic Sync",
+        description: "Everything syncs seamlessly when you're back online. No manual uploads required."
+      },
+      {
+        title: "No Data Loss",
+        description: "Your work is saved locally and never lost, even if the connection drops mid-task."
+      }
+    ],
+    cta: "See How Offline Mode Works"
   },
   testimonials: {
     video: {
       title: "See How It Works",
-      description: "Watch a 2-minute demo of our platform in action",
+      description: "Watch a quick demo of our platform in action",
       loading: "Loading demo video...",
       altText: "Property maintenance dashboard demo",
       stats: [
         {
-          value: "2min",
+          value: "60s",
           label: "Quick Demo"
         },
         {
@@ -128,40 +208,40 @@ export default {
       ]
     },
     section: {
-      title: "What Our Customers Say",
-      subtitle: "Join hundreds of property managers who've transformed their operations"
+      title: "What Property Teams Are Saying",
+      subtitle: "Real feedback from real users"
     },
     testimonials: [
       {
-        name: "Sarah Johnson",
+        name: "Marcus Weber",
+        title: "Operations Manager",
+        company: "Alpine Property Services",
+        quote: "We used to lose hours every week just tracking down job statuses. Now I can see everything in one dashboard. The offline mode is a lifesaver for our rural properties.",
+        altText: "Marcus Weber profile"
+      },
+      {
+        name: "Elena Kowalski",
         title: "Property Manager",
-        company: "Metro Properties",
-        quote: "This platform has revolutionized how we handle maintenance. We've cut our response time by 60% and our tenants are happier than ever.",
-        altText: "Sarah Johnson profile"
+        company: "City Living Properties",
+        quote: "My field team actually uses this — that's the highest compliment I can give. Simple interface, works without WiFi, and I finally know what's getting done.",
+        altText: "Elena Kowalski profile"
       },
       {
-        name: "Michael Chen",
-        title: "Operations Director",
-        company: "Urban Living Group",
-        quote: "The cost savings have been incredible. We've reduced our maintenance budget by 40% while actually improving service quality.",
-        altText: "Michael Chen profile"
-      },
-      {
-        name: "Lisa Rodriguez",
-        title: "Portfolio Manager",
-        company: "Residential Plus",
-        quote: "The mobile app is a game-changer. I can manage work orders from anywhere and keep track of all our properties in real-time.",
-        altText: "Lisa Rodriguez profile"
+        name: "Thomas Richter",
+        title: "Maintenance Supervisor",
+        company: "Residential Plus GmbH",
+        quote: "The photo documentation alone has saved us from three disputes with tenants. Everything is logged and timestamped. Professional and easy to use.",
+        altText: "Thomas Richter profile"
       }
     ],
     trustIndicators: [
       {
-        value: "4.6/5",
+        value: "4.8/5",
         label: "Average Rating"
       },
       {
-        value: "450+",
-        label: "Happy Customers"
+        value: "500+",
+        label: "Happy Users"
       },
       {
         value: "99%",
@@ -189,39 +269,39 @@ export default {
     }
   },
   pricing: {
-    title: "Simple, Transparent Pricing",
-    subtitle: "Start free during our beta phase. Lock in exclusive benefits as an early supporter.",
+    title: "Simple Pricing, No Surprises",
+    subtitle: "Start free, upgrade when you're ready.",
     beta: {
-      badge: "Beta Access",
+      badge: "Free During Beta",
       price: "FREE",
-      duration: "during testing phase",
-      cta: "Join Beta Now",
+      duration: "during beta testing",
+      cta: "Start Free Now",
       benefits: [
         "Full access to all features",
         "Unlimited properties & work orders",
-        "Real-time sync across devices",
+        "Offline mode included",
         "Mobile app for iOS & Android",
         "Priority support as beta tester",
-        "Exclusive early-bird discount at launch"
+        "Lock in early-bird pricing"
       ]
     },
     pro: {
-      badge: "Coming Soon",
-      price: "€450",
-      duration: "lifetime access",
+      badge: "Lifetime Access",
+      price: "€95",
+      duration: "one-time payment",
       cta: "Coming Soon",
       benefits: [
-        "Everything in Beta",
-        "All future updates included",
+        "Everything in Free tier",
+        "All future updates forever",
         "Advanced analytics & reporting",
-        "API access for integrations",
-        "Dedicated account manager"
+        "Priority email support",
+        "Early access to new features"
       ]
     },
     trustSignals: [
-      "No credit card required",
-      "Setup in 5 minutes",
-      "Cancel anytime"
+      "No credit card required for beta",
+      "Cancel anytime",
+      "14-day money-back guarantee"
     ]
   },
   howItWorks: {
@@ -246,23 +326,23 @@ export default {
     ]
   },
   socialProof: {
-    description: "Trusted by 450+ property management companies",
+    description: "Trusted by property maintenance teams",
     companies: {
-      0: "PropertyCorp",
-      1: "RealEstate Pro",
-      2: "BuildingMax",
-      3: "PropTech",
-      4: "ManagePlus",
-      5: "PropertyHub"
+      0: "Alpine Property",
+      1: "City Living",
+      2: "Urban Maintenance",
+      3: "PropertyCare",
+      4: "FacilityFirst",
+      5: "BuildRight"
     }
   },
   finalCta: {
-    title: "Ready to Transform Your Property Management?",
-    subtitle: "Join hundreds of property managers who've reduced maintenance costs by 40%",
-    button: "Sign up for free"
+    title: "Ready to Take Control of Maintenance?",
+    subtitle: "Spend less time managing chaos — and more time getting work done.",
+    button: "Start Free Today"
   },
   stickyMobile: {
-    button: "Sign up for free"
+    button: "Start Free"
   },
   languageSwitcher: {
     languages: {
@@ -272,7 +352,7 @@ export default {
   },
   footer: {
     brand: "Abrax",
-    description: "Simplyfying Property Maintenance Management. Abrax cuts admin time by managing properties, tasks, and client jobs in one platform!",
+    description: "Property maintenance, simplified. Manage properties, tasks, and field teams in one platform — even offline.",
     sections: {
       product: {
         title: "Product",
