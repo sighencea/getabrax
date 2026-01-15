@@ -70,7 +70,7 @@ export const WaitlistModal: React.FC = () => {
             onClick={(e) => e.stopPropagation()}
           >
             {/* Gradient Header */}
-            <div className="bg-gradient-to-r from-purple-600 via-purple-500 to-pink-500 px-6 py-5 relative">
+            <div className="bg-gradient-to-r from-blue-700 via-blue-600 to-blue-500 px-6 py-5 relative">
               <h3 className="text-xl font-bold text-white">
                 {t('waitlist.title')}
               </h3>
@@ -115,7 +115,7 @@ export const WaitlistModal: React.FC = () => {
                       onClick={handleClose}
                       whileHover={{ scale: 1.02 }}
                       whileTap={{ scale: 0.98 }}
-                      className="bg-gradient-to-r from-purple-600 to-pink-500 text-white px-8 py-3 rounded-full font-semibold hover:opacity-90 transition-opacity"
+                      className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-full font-semibold transition-colors"
                     >
                       {t('waitlist.gotIt')}
                     </motion.button>
