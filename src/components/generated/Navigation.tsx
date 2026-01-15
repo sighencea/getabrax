@@ -138,21 +138,15 @@ export default function Navigation({}: NavigationProps = {}) {
             {/* Spacer to push CTA buttons to the right */}
             <div className="flex-1"></div>
 
-            {/* Desktop CTA Buttons */}
-            <div className="hidden md:flex items-center space-x-4">
-              <button
-                onClick={openWaitlist}
-                className="inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-lg text-gray-700 bg-white hover:bg-gray-50 transition-colors duration-200"
-              >
-                {t('navigation.buttons.0')}
-              </button>
+            {/* Desktop CTA Button */}
+            <div className="hidden md:flex items-center">
               <motion.button
                 onClick={openWaitlist}
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
                 className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-lg text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200"
               >
-                {t('navigation.buttons.1')}
+                {t('navigation.cta')}
               </motion.button>
             </div>
 
@@ -210,22 +204,14 @@ export default function Navigation({}: NavigationProps = {}) {
               </div>
             </div>
 
-            {/* Bottom CTA Buttons */}
+            {/* Bottom CTA Button */}
             <div className="p-6 bg-gray-50/50 border-t border-gray-100">
-              <div className="flex gap-3">
-                <button
-                  onClick={() => { openWaitlist(); closeMobileMenu(); }}
-                  className="flex-1 text-center px-6 py-4 border border-gray-300 text-base font-semibold rounded-xl text-gray-700 bg-white hover:bg-gray-50 transition-colors duration-200"
-                >
-                  {t('navigation.buttons.0')}
-                </button>
-                <button
-                  onClick={() => { openWaitlist(); closeMobileMenu(); }}
-                  className="flex-1 text-center px-6 py-4 border border-transparent text-base font-semibold rounded-xl text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200"
-                >
-                  {t('navigation.buttons.1')}
-                </button>
-              </div>
+              <button
+                onClick={() => { openWaitlist(); closeMobileMenu(); }}
+                className="w-full text-center px-6 py-4 border border-transparent text-base font-semibold rounded-xl text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200"
+              >
+                {t('navigation.cta')}
+              </button>
             </div>
           </motion.div>
         )}

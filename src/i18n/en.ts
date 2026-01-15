@@ -8,20 +8,13 @@ export default {
       2: "Testimonials",
       3: "Pricing"
     },
-    buttons: [
-      "Join Waiting List",
-      "Join Waiting List"
-    ]
+    cta: "Join Waiting List"
   },
   hero: {
     badge: "Built for Real-World Property Maintenance",
     headline: "Stop Losing Hours Every Week to Maintenance Admin",
     subheading: "Abrax brings properties, tasks, and field teams into one platform. Maintenance gets done faster, even when there's no internet.",
-    buttons: [
-      "Join Waiting List",
-      "Book Demo"
-    ],
-    buttonSubtext: "No Credit Card",
+    cta: "Join Waiting List",
     features: [
       "No credit card required",
       "Works offline",
@@ -468,7 +461,7 @@ export default {
           "Effortless maintenance"
         ]
       },
-      cta: "Sign up for free"
+      cta: "Join Waiting List"
     },
     careers: {
       title: "Careers",
@@ -505,8 +498,8 @@ export default {
       navigation: "Documentation",
       cta: {
         title: "Ready to get started?",
-        description: "Sign up for free and transform your property maintenance operations today.",
-        button: "Sign up for free"
+        description: "Join the waiting list and be the first to transform your property maintenance operations.",
+        button: "Join Waiting List"
       },
       sections: {
         gettingStarted: {

@@ -8,20 +8,13 @@ export default {
       2: "Bewertungen",
       3: "Preise"
     },
-    buttons: [
-      "Auf Warteliste",
-      "Auf Warteliste"
-    ]
+    cta: "Auf Warteliste Setzen"
   },
   hero: {
     badge: "Entwickelt für echte Immobilienwartung",
     headline: "Schluss mit stundenlangem Wartungs-Verwaltungsaufwand",
     subheading: "Abrax vereint Immobilien, Aufgaben und Außendienstteams auf einer Plattform. Wartung wird schneller erledigt, auch ohne Internet.",
-    buttons: [
-      "Auf Warteliste setzen",
-      "Demo buchen"
-    ],
-    buttonSubtext: "Keine Kreditkarte",
+    cta: "Auf Warteliste Setzen",
     features: [
       "Keine Kreditkarte erforderlich",
       "Funktioniert offline",
@@ -265,7 +258,7 @@ export default {
       ]
     },
     cta: {
-      button: "Auf Warteliste setzen",
+      button: "Auf Warteliste Setzen",
       description: "Benachrichtigt werden, wenn Abrax startet"
     }
   },
@@ -276,7 +269,7 @@ export default {
       badge: "Kostenlos während Beta",
       price: "KOSTENLOS",
       duration: "während der Beta-Testphase",
-      cta: "Auf Warteliste setzen",
+      cta: "Auf Warteliste Setzen",
       benefits: [
         "Vollzugang zu allen Funktionen",
         "Unbegrenzte Immobilien & Arbeitsaufträge",
@@ -290,7 +283,7 @@ export default {
       badge: "Lebenslanger Zugang",
       price: "95€",
       duration: "einmalige Zahlung",
-      cta: "Demnächst",
+      cta: "Bald verfügbar",
       benefits: [
         "Alles aus dem kostenlosen Plan",
         "Alle zukünftigen Updates für immer",
@@ -340,20 +333,20 @@ export default {
   finalCta: {
     title: "Bereit, die Kontrolle über die Wartung zu übernehmen?",
     subtitle: "Weniger Zeit mit Chaos-Management. Mehr Zeit mit echter Arbeit.",
-    button: "Auf Warteliste setzen"
+    button: "Auf Warteliste Setzen"
   },
   stickyMobile: {
-    button: "Auf Warteliste"
+    button: "Auf Warteliste Setzen"
   },
   waitlist: {
-    title: "Auf die Warteliste setzen",
+    title: "Auf die Warteliste Setzen",
     subtitle: "Erfahren Sie als Erstes, wenn Abrax startet",
     form: {
       name: "Ihr Name",
       namePlaceholder: "Max Mustermann",
       email: "E-Mail-Adresse",
       emailPlaceholder: "max@beispiel.de",
-      submit: "Auf Warteliste setzen",
+      submit: "Auf Warteliste Setzen",
       privacy: "Wir respektieren Ihre Privatsphäre. Jederzeit abmelden."
     },
     success: "Sie sind auf der Liste! Wir melden uns bald.",
@@ -468,7 +461,7 @@ export default {
           "Mühelose Wartung"
         ]
       },
-      cta: "Kostenlos registrieren"
+      cta: "Auf Warteliste Setzen"
     },
     careers: {
       title: "Karriere",
@@ -505,8 +498,8 @@ export default {
       navigation: "Dokumentation",
       cta: {
         title: "Bereit zu starten?",
-        description: "Registrieren Sie sich kostenlos und transformieren Sie noch heute Ihre Immobilienwartungsabläufe.",
-        button: "Kostenlos registrieren"
+        description: "Tragen Sie sich in die Warteliste ein und seien Sie als Erster dabei, Ihre Immobilienwartungsabläufe zu transformieren.",
+        button: "Auf Warteliste Setzen"
       },
       sections: {
         gettingStarted: {

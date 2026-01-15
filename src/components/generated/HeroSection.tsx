@@ -1,12 +1,11 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Play, CheckCircle, X } from 'lucide-react';
+import React from 'react';
+import { motion } from 'framer-motion';
+import { CheckCircle } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { useWaitlist } from '../context/WaitlistContext';
 
 export const HeroSection: React.FC = () => {
   const { t } = useTranslation('common');
-  const [showDemoPopup, setShowDemoPopup] = useState(false);
   const { openWaitlist } = useWaitlist();
 
   return (
@@ -39,20 +38,9 @@ export const HeroSection: React.FC = () => {
                 onClick={openWaitlist}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors shadow-lg text-center"
+                className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-700 transition-colors shadow-lg text-center"
               >
-                <span className="block text-lg">{t('hero.buttons.0')}</span>
-                <span className="block text-sm font-normal opacity-90">{t('hero.buttonSubtext')}</span>
-              </motion.button>
-
-              <motion.button
-                onClick={() => setShowDemoPopup(true)}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-lg font-semibold text-lg hover:border-gray-400 transition-colors flex items-center justify-center gap-2"
-              >
-                <Play className="w-5 h-5" />
-                {t('hero.buttons.1')}
+                {t('hero.cta')}
               </motion.button>
             </div>
 
@@ -127,46 +115,6 @@ export const HeroSection: React.FC = () => {
           </motion.div>
         </div>
       </div>
-
-      {/* Demo Popup */}
-      <AnimatePresence>
-        {showDemoPopup && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-black/50 flex items-center justify-center z-50"
-            onClick={() => setShowDemoPopup(false)}
-          >
-            <motion.div
-              initial={{ scale: 0.9, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.9, opacity: 0 }}
-              className="bg-white rounded-2xl p-8 max-w-md mx-4 shadow-2xl"
-              onClick={(e) => e.stopPropagation()}
-            >
-              <div className="flex justify-between items-start mb-4">
-                <h3 className="text-xl font-semibold text-gray-900">
-                  {t('demoPopup.title')}
-                </h3>
-                <button
-                  onClick={() => setShowDemoPopup(false)}
-                  className="text-gray-400 hover:text-gray-600 transition-colors"
-                >
-                  <X className="w-5 h-5" />
-                </button>
-              </div>
-              <p className="text-gray-600 mb-6">{t('demoPopup.message')}</p>
-              <button
-                onClick={() => setShowDemoPopup(false)}
-                className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
-              >
-                {t('demoPopup.cta')}
-              </button>
-            </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
     </section>
   );
 };
