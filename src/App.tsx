@@ -1,5 +1,6 @@
 import { useMemo } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Toaster } from 'sonner';
 import { Container, Theme } from './settings/types';
 import { NavigationProvider } from './components/context/NavigationContext';
 import { WaitlistProvider } from './components/context/WaitlistContext';
@@ -53,6 +54,7 @@ function App() {
             </Routes>
           </Router>
           <WaitlistModal />
+          <Toaster position="top-center" richColors />
         </NavigationProvider>
       </WaitlistProvider>
     );
