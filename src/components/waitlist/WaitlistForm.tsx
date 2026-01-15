@@ -104,7 +104,7 @@ export const WaitlistForm: React.FC<WaitlistFormProps> = ({ onSuccess }) => {
           htmlFor="waitlist-name"
           className="block text-sm font-medium text-gray-700 mb-1"
         >
-          {t('waitlist.form.name')}
+          {t('waitlist.form.name')} <span className="text-red-500">*</span>
         </label>
         <input
           {...register('name')}
@@ -125,7 +125,7 @@ export const WaitlistForm: React.FC<WaitlistFormProps> = ({ onSuccess }) => {
           htmlFor="waitlist-email"
           className="block text-sm font-medium text-gray-700 mb-1"
         >
-          {t('waitlist.form.email')}
+          {t('waitlist.form.email')} <span className="text-red-500">*</span>
         </label>
         <input
           {...register('email')}
@@ -143,7 +143,7 @@ export const WaitlistForm: React.FC<WaitlistFormProps> = ({ onSuccess }) => {
       {/* Platform Selection */}
       <div>
         <label className="block text-sm font-medium text-gray-700 mb-2">
-          {t('waitlist.form.platform')}
+          {t('waitlist.form.platform')} <span className="text-red-500">*</span>
         </label>
         <div className="flex flex-wrap gap-2">
           {PLATFORM_OPTIONS.map((platform) => (
