@@ -2,9 +2,8 @@ import React, { useState, useRef } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
-import { toast } from 'sonner';
 import { Loader2 } from 'lucide-react';
 import { AltchaWidget, AltchaWidgetRef } from './AltchaWidget';
 import { getWaitlistSubmitUrl } from '../../lib/supabase';
@@ -28,6 +27,7 @@ export const WaitlistForm: React.FC<WaitlistFormProps> = ({ onSuccess }) => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [altchaPayload, setAltchaPayload] = useState<string | null>(null);
   const [selectedPlatforms, setSelectedPlatforms] = useState<Platform[]>([]);
+  const [formError, setFormError] = useState<string | null>(null);
   const altchaRef = useRef<AltchaWidgetRef>(null);
 
   const togglePlatform = (platform: Platform) => {
@@ -36,6 +36,8 @@ export const WaitlistForm: React.FC<WaitlistFormProps> = ({ onSuccess }) => {
         ? prev.filter((p) => p !== platform)
         : [...prev, platform]
     );
+    // Clear error when user interacts
+    setFormError(null);
   };
 
   const {
@@ -48,13 +50,16 @@ export const WaitlistForm: React.FC<WaitlistFormProps> = ({ onSuccess }) => {
   });
 
   const onSubmit = async (data: WaitlistFormData) => {
+    // Clear previous errors
+    setFormError(null);
+
     if (!altchaPayload) {
-      toast.error(t('waitlist.errors.captchaRequired'));
+      setFormError(t('waitlist.errors.captchaRequired'));
       return;
     }
 
     if (selectedPlatforms.length === 0) {
-      toast.error(t('waitlist.errors.platformRequired'));
+      setFormError(t('waitlist.errors.platformRequired'));
       return;
     }
 
@@ -76,9 +81,9 @@ export const WaitlistForm: React.FC<WaitlistFormProps> = ({ onSuccess }) => {
 
       if (!response.ok) {
         if (result.error === 'email_exists') {
-          toast.error(t('waitlist.errors.emailExists'));
+          setFormError(t('waitlist.errors.emailExists'));
         } else {
-          toast.error(t('waitlist.errors.generic'));
+          setFormError(t('waitlist.errors.generic'));
         }
         return;
       }
@@ -90,7 +95,7 @@ export const WaitlistForm: React.FC<WaitlistFormProps> = ({ onSuccess }) => {
       onSuccess?.();
     } catch (error) {
       console.error('Waitlist submission error:', error);
-      toast.error(t('waitlist.errors.generic'));
+      setFormError(t('waitlist.errors.generic'));
     } finally {
       setIsSubmitting(false);
     }
@@ -113,6 +118,7 @@ export const WaitlistForm: React.FC<WaitlistFormProps> = ({ onSuccess }) => {
           placeholder={t('waitlist.form.namePlaceholder')}
           className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
           disabled={isSubmitting}
+          onChange={() => setFormError(null)}
         />
         {errors.name && (
           <p className="text-red-500 text-sm mt-1">{errors.name.message}</p>
@@ -134,6 +140,7 @@ export const WaitlistForm: React.FC<WaitlistFormProps> = ({ onSuccess }) => {
           placeholder={t('waitlist.form.emailPlaceholder')}
           className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
           disabled={isSubmitting}
+          onChange={() => setFormError(null)}
         />
         {errors.email && (
           <p className="text-red-500 text-sm mt-1">{errors.email.message}</p>
@@ -168,13 +175,30 @@ export const WaitlistForm: React.FC<WaitlistFormProps> = ({ onSuccess }) => {
       <div className="py-2">
         <AltchaWidget
           ref={altchaRef}
-          onVerified={(payload) => setAltchaPayload(payload)}
+          onVerified={(payload) => {
+            setAltchaPayload(payload);
+            setFormError(null);
+          }}
           onError={(error) => {
             console.error('ALTCHA error:', error);
-            toast.error(t('waitlist.errors.generic'));
+            setFormError(t('waitlist.errors.generic'));
           }}
         />
       </div>
+
+      {/* Inline Error Message */}
+      <AnimatePresence>
+        {formError && (
+          <motion.div
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            className="bg-amber-50 border border-amber-200 rounded-lg px-4 py-3"
+          >
+            <p className="text-red-500 text-sm font-medium">{formError}</p>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       {/* Submit Button */}
       <motion.button
