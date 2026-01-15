@@ -1,10 +1,12 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { CheckCircle, ExternalLink } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+import { useWaitlist } from '../context/WaitlistContext';
 
 export const SignupFormSection: React.FC = () => {
   const { t } = useTranslation('common');
+  const { openWaitlist } = useWaitlist();
 
   return (
     <section id="signup-section" className="py-24 bg-white">
@@ -98,21 +100,14 @@ export const SignupFormSection: React.FC = () => {
             }}
             className="text-center"
           >
-            <motion.a
-              href="https://www.abrax.app/?view=signup"
-              target="_blank"
-              rel="noopener noreferrer"
-              whileHover={{
-                scale: 1.02
-              }}
-              whileTap={{
-                scale: 0.98
-              }}
+            <motion.button
+              onClick={openWaitlist}
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
               className="inline-flex items-center gap-3 bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-700 transition-colors"
             >
               {t('signup.cta.button')}
-              <ExternalLink className="w-5 h-5" />
-            </motion.a>
+            </motion.button>
             
             <p className="text-gray-500 text-sm mt-4">
               {t('signup.cta.description')}

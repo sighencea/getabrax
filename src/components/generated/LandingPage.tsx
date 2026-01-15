@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { useLocation } from 'react-router-dom';
 import { useNavigation } from '../context/NavigationContext';
+import { useWaitlist } from '../context/WaitlistContext';
 import Navigation from './Navigation';
 import { HeroSection } from './HeroSection';
 import { TrustLogosSection } from './TrustLogosSection';
@@ -21,6 +22,7 @@ export const LandingPage: React.FC = () => {
   const { t } = useTranslation('common');
   const location = useLocation();
   const { isMobileMenuOpen } = useNavigation();
+  const { openWaitlist } = useWaitlist();
   const [showStickyMobile, setShowStickyMobile] = useState(false);
 
   useEffect(() => {
@@ -104,16 +106,14 @@ export const LandingPage: React.FC = () => {
             <p className="text-xl text-blue-100 mb-8">
               {t('finalCta.subtitle')}
             </p>
-            <motion.a
-              href="https://www.abrax.app/?view=signup"
-              target="_blank"
-              rel="noopener noreferrer"
+            <motion.button
+              onClick={openWaitlist}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-50 transition-colors inline-block"
+              className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-50 transition-colors"
             >
               {t('finalCta.button')}
-            </motion.a>
+            </motion.button>
           </div>
         </section>
 
@@ -124,14 +124,12 @@ export const LandingPage: React.FC = () => {
             animate={{ y: 0 }}
             className="fixed bottom-0 left-0 right-0 bg-blue-600 p-4 z-50 md:hidden"
           >
-            <a
-              href="https://www.abrax.app/?view=signup"
-              target="_blank"
-              rel="noopener noreferrer"
+            <button
+              onClick={openWaitlist}
               className="block w-full bg-white text-blue-600 py-3 rounded-lg font-semibold text-center"
             >
               {t('stickyMobile.button')}
-            </a>
+            </button>
           </motion.div>
         )}
 

@@ -2,6 +2,8 @@ import { useMemo } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Container, Theme } from './settings/types';
 import { NavigationProvider } from './components/context/NavigationContext';
+import { WaitlistProvider } from './components/context/WaitlistContext';
+import { WaitlistModal } from './components/waitlist/WaitlistModal';
 import { LandingPage } from './components/generated/LandingPage';
 import { AboutPage } from './components/pages/AboutPage';
 import { CareersPage } from './components/pages/CareersPage';
@@ -32,24 +34,27 @@ function App() {
 
   const appContent = useMemo(() => {
     return (
-      <NavigationProvider>
-        <Router>
-          <ScrollToTop />
-          <Routes>
-            <Route path="/" element={<LandingPage />} />
-            <Route path="/about" element={<AboutPage />} />
-            <Route path="/careers" element={<CareersPage />} />
-            <Route path="/press" element={<PressPage />} />
-            <Route path="/contact" element={<ContactPage />} />
-            <Route path="/documentation" element={<DocumentationPage />} />
-            <Route path="/help-center" element={<HelpCenterPage />} />
-            <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
-            <Route path="/terms-of-service" element={<TermsOfServicePage />} />
-            <Route path="/cookie-policy" element={<CookiePolicyPage />} />
-            <Route path="/gdpr" element={<GdprPage />} />
-          </Routes>
-        </Router>
-      </NavigationProvider>
+      <WaitlistProvider>
+        <NavigationProvider>
+          <Router>
+            <ScrollToTop />
+            <Routes>
+              <Route path="/" element={<LandingPage />} />
+              <Route path="/about" element={<AboutPage />} />
+              <Route path="/careers" element={<CareersPage />} />
+              <Route path="/press" element={<PressPage />} />
+              <Route path="/contact" element={<ContactPage />} />
+              <Route path="/documentation" element={<DocumentationPage />} />
+              <Route path="/help-center" element={<HelpCenterPage />} />
+              <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
+              <Route path="/terms-of-service" element={<TermsOfServicePage />} />
+              <Route path="/cookie-policy" element={<CookiePolicyPage />} />
+              <Route path="/gdpr" element={<GdprPage />} />
+            </Routes>
+          </Router>
+          <WaitlistModal />
+        </NavigationProvider>
+      </WaitlistProvider>
     );
   }, []);
 

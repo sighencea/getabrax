@@ -9,8 +9,8 @@ export default {
       3: "Preise"
     },
     buttons: [
-      "Anmelden",
-      "Kostenlos starten"
+      "Auf Warteliste",
+      "Auf Warteliste"
     ]
   },
   hero: {
@@ -18,7 +18,7 @@ export default {
     headline: "Schluss mit stundenlangem Wartungs-Verwaltungsaufwand",
     subheading: "Abrax vereint Immobilien, Aufgaben und Außendienstteams auf einer Plattform. Wartung wird schneller erledigt, auch ohne Internet.",
     buttons: [
-      "Kostenloses Konto erstellen",
+      "Auf Warteliste setzen",
       "Demo buchen"
     ],
     buttonSubtext: "Keine Kreditkarte",
@@ -265,8 +265,8 @@ export default {
       ]
     },
     cta: {
-      button: "Kostenlos registrieren",
-      description: "Sie werden für die Registrierung zu abrax.app weitergeileitet"
+      button: "Auf Warteliste setzen",
+      description: "Benachrichtigt werden, wenn Abrax startet"
     }
   },
   pricing: {
@@ -276,7 +276,7 @@ export default {
       badge: "Kostenlos während Beta",
       price: "KOSTENLOS",
       duration: "während der Beta-Testphase",
-      cta: "Jetzt kostenlos starten",
+      cta: "Auf Warteliste setzen",
       benefits: [
         "Vollzugang zu allen Funktionen",
         "Unbegrenzte Immobilien & Arbeitsaufträge",
@@ -340,10 +340,28 @@ export default {
   finalCta: {
     title: "Bereit, die Kontrolle über die Wartung zu übernehmen?",
     subtitle: "Weniger Zeit mit Chaos-Management. Mehr Zeit mit echter Arbeit.",
-    button: "Heute kostenlos starten"
+    button: "Auf Warteliste setzen"
   },
   stickyMobile: {
-    button: "Kostenlos starten"
+    button: "Auf Warteliste"
+  },
+  waitlist: {
+    title: "Auf die Warteliste setzen",
+    subtitle: "Erfahren Sie als Erstes, wenn Abrax startet",
+    form: {
+      name: "Ihr Name",
+      namePlaceholder: "Max Mustermann",
+      email: "E-Mail-Adresse",
+      emailPlaceholder: "max@beispiel.de",
+      submit: "Auf Warteliste setzen",
+      privacy: "Wir respektieren Ihre Privatsphäre. Jederzeit abmelden."
+    },
+    success: "Sie sind auf der Liste! Wir melden uns bald.",
+    errors: {
+      captchaRequired: "Bitte Verifizierung abschließen",
+      emailExists: "Diese E-Mail ist bereits auf der Warteliste",
+      generic: "Etwas ist schiefgelaufen. Bitte erneut versuchen."
+    }
   },
   languageSwitcher: {
     languages: {

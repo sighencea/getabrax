@@ -13,7 +13,8 @@
       "Bash(npm run dev:*)",
       "Bash(cp:*)",
       "WebFetch(domain:www.sinest.app)",
-      "Bash(grep:*)"
+      "Bash(grep:*)",
+      "Bash(npx supabase:*)"
     ],
     "deny": []
   }

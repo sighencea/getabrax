@@ -1,10 +1,12 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { CheckCircle, ExternalLink, Shield, Clock, CreditCard } from 'lucide-react';
+import { CheckCircle, Shield, Clock, CreditCard } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+import { useWaitlist } from '../context/WaitlistContext';
 
 export const PricingSection: React.FC = () => {
   const { t } = useTranslation('common');
+  const { openWaitlist } = useWaitlist();
 
   const betaBenefits = [
     t('pricing.beta.benefits.0'),
@@ -91,17 +93,14 @@ export const PricingSection: React.FC = () => {
               </ul>
 
               {/* CTA Button */}
-              <motion.a
-                href="https://www.abrax.app/?view=signup"
-                target="_blank"
-                rel="noopener noreferrer"
+              <motion.button
+                onClick={openWaitlist}
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
                 className="flex items-center justify-center gap-2 w-full bg-blue-600 text-white py-4 rounded-xl font-semibold text-lg hover:bg-blue-700 transition-colors"
               >
                 {t('pricing.beta.cta')}
-                <ExternalLink className="w-5 h-5" />
-              </motion.a>
+              </motion.button>
             </div>
           </motion.div>
 

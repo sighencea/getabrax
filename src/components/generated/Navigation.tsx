@@ -6,6 +6,7 @@ import { useTranslation } from 'react-i18next';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import { useNavigation } from '../context/NavigationContext';
+import { useWaitlist } from '../context/WaitlistContext';
 import logoImage from '../../assets/images/logo/Abrax_logo_horizontal_alternative_dark.png';
 export interface NavigationProps {}
 
@@ -14,6 +15,7 @@ export default function Navigation({}: NavigationProps = {}) {
   const navigate = useNavigate();
   const location = useLocation();
   const { isMobileMenuOpen, setIsMobileMenuOpen } = useNavigation();
+  const { openWaitlist } = useWaitlist();
 
   // Prevent body scroll when mobile menu is open
   React.useEffect(() => {
@@ -138,16 +140,20 @@ export default function Navigation({}: NavigationProps = {}) {
 
             {/* Desktop CTA Buttons */}
             <div className="hidden md:flex items-center space-x-4">
-              <a href="https://www.abrax.app/?view=signin" target="_blank" rel="noopener noreferrer" className="inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-lg text-gray-700 bg-white hover:bg-gray-50 transition-colors duration-200">
+              <button
+                onClick={openWaitlist}
+                className="inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-lg text-gray-700 bg-white hover:bg-gray-50 transition-colors duration-200"
+              >
                 {t('navigation.buttons.0')}
-              </a>
-              <motion.a href="https://www.abrax.app/?view=signup" target="_blank" rel="noopener noreferrer" whileHover={{
-              scale: 1.02
-            }} whileTap={{
-              scale: 0.98
-            }} className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-lg text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200">
+              </button>
+              <motion.button
+                onClick={openWaitlist}
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-lg text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200"
+              >
                 {t('navigation.buttons.1')}
-              </motion.a>
+              </motion.button>
             </div>
 
             {/* Mobile hamburger button */}
@@ -207,24 +213,18 @@ export default function Navigation({}: NavigationProps = {}) {
             {/* Bottom CTA Buttons */}
             <div className="p-6 bg-gray-50/50 border-t border-gray-100">
               <div className="flex gap-3">
-                <a
-                  href="https://www.abrax.app/?view=signin"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  onClick={closeMobileMenu}
+                <button
+                  onClick={() => { openWaitlist(); closeMobileMenu(); }}
                   className="flex-1 text-center px-6 py-4 border border-gray-300 text-base font-semibold rounded-xl text-gray-700 bg-white hover:bg-gray-50 transition-colors duration-200"
                 >
                   {t('navigation.buttons.0')}
-                </a>
-                <a
-                  href="https://www.abrax.app/?view=signup"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  onClick={closeMobileMenu}
+                </button>
+                <button
+                  onClick={() => { openWaitlist(); closeMobileMenu(); }}
                   className="flex-1 text-center px-6 py-4 border border-transparent text-base font-semibold rounded-xl text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200"
                 >
                   {t('navigation.buttons.1')}
-                </a>
+                </button>
               </div>
             </div>
           </motion.div>

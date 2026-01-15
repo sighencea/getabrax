@@ -9,8 +9,8 @@ export default {
       3: "Pricing"
     },
     buttons: [
-      "Sign In",
-      "Start Free"
+      "Join Waiting List",
+      "Join Waiting List"
     ]
   },
   hero: {
@@ -18,7 +18,7 @@ export default {
     headline: "Stop Losing Hours Every Week to Maintenance Admin",
     subheading: "Abrax brings properties, tasks, and field teams into one platform. Maintenance gets done faster, even when there's no internet.",
     buttons: [
-      "Create Free Account",
+      "Join Waiting List",
       "Book Demo"
     ],
     buttonSubtext: "No Credit Card",
@@ -265,8 +265,8 @@ export default {
       ]
     },
     cta: {
-      button: "Sign up for free",
-      description: "You will be directed to abrax.app to sign up"
+      button: "Join Waiting List",
+      description: "Be notified when Abrax launches"
     }
   },
   pricing: {
@@ -276,7 +276,7 @@ export default {
       badge: "Free During Beta",
       price: "FREE",
       duration: "during beta testing",
-      cta: "Start Free Now",
+      cta: "Join Waiting List",
       benefits: [
         "Full access to all features",
         "Unlimited properties & work orders",
@@ -340,10 +340,28 @@ export default {
   finalCta: {
     title: "Ready to Take Control of Maintenance?",
     subtitle: "Spend less time managing chaos. More time getting work done.",
-    button: "Start Free Today"
+    button: "Join Waiting List"
   },
   stickyMobile: {
-    button: "Start Free"
+    button: "Join Waiting List"
+  },
+  waitlist: {
+    title: "Join the Waiting List",
+    subtitle: "Be the first to know when Abrax launches",
+    form: {
+      name: "Your Name",
+      namePlaceholder: "John Doe",
+      email: "Email Address",
+      emailPlaceholder: "john@example.com",
+      submit: "Join Waiting List",
+      privacy: "We respect your privacy. Unsubscribe anytime."
+    },
+    success: "You're on the list! We'll be in touch soon.",
+    errors: {
+      captchaRequired: "Please complete the verification",
+      emailExists: "This email is already on the waiting list",
+      generic: "Something went wrong. Please try again."
+    }
   },
   languageSwitcher: {
     languages: {
