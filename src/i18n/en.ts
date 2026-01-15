@@ -360,7 +360,7 @@ export default {
     gotIt: "Got it!",
     errors: {
       captchaRequired: "Please complete the verification",
-      emailExists: "This email is already on the waiting list",
+      emailExists: "This email address is already signed up",
       platformRequired: "Please select at least one platform",
       generic: "Something went wrong. Please try again."
     }

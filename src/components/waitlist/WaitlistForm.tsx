@@ -80,7 +80,8 @@ export const WaitlistForm: React.FC<WaitlistFormProps> = ({ onSuccess }) => {
       const result = await response.json();
 
       if (!response.ok) {
-        if (result.error === 'email_exists') {
+        // Handle duplicate email (409 Conflict)
+        if (response.status === 409 || result.error === 'email_exists') {
           setFormError(t('waitlist.errors.emailExists'));
         } else {
           setFormError(t('waitlist.errors.generic'));

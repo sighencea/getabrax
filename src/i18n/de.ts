@@ -360,7 +360,7 @@ export default {
     gotIt: "Verstanden!",
     errors: {
       captchaRequired: "Bitte Verifizierung abschließen",
-      emailExists: "Diese E-Mail ist bereits auf der Warteliste",
+      emailExists: "Diese E-Mail-Adresse ist bereits angemeldet",
       platformRequired: "Bitte wählen Sie mindestens eine Plattform",
       generic: "Etwas ist schiefgelaufen. Bitte erneut versuchen."
     }
