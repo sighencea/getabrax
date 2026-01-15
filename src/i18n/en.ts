@@ -339,20 +339,29 @@ export default {
     button: "Join Waiting List"
   },
   waitlist: {
-    title: "Join the Waiting List",
-    subtitle: "Be the first to know when Abrax launches",
+    title: "Join the Testing Phase",
+    subtitle: "Be among the first to experience Abrax",
     form: {
       name: "Your Name",
       namePlaceholder: "John Doe",
       email: "Email Address",
       emailPlaceholder: "john@example.com",
+      platform: "Which platforms are you interested in?",
+      platforms: {
+        android: "Android",
+        ios: "iOS",
+        web: "Web"
+      },
       submit: "Join Waiting List",
       privacy: "We respect your privacy. Unsubscribe anytime."
     },
-    success: "You're on the list! We'll be in touch soon.",
+    successTitle: "You're on the list!",
+    successMessage: "Thank you for joining our waitlist. We'll notify you by email once testing opens to our closed group.",
+    gotIt: "Got it!",
     errors: {
       captchaRequired: "Please complete the verification",
       emailExists: "This email is already on the waiting list",
+      platformRequired: "Please select at least one platform",
       generic: "Something went wrong. Please try again."
     }
   },

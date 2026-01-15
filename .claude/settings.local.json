@@ -15,7 +15,8 @@
       "WebFetch(domain:www.sinest.app)",
       "Bash(grep:*)",
       "Bash(npx supabase:*)",
-      "Bash(curl -s https://ssjoxiktfhugmcohrqhm.supabase.co/functions/v1/altcha-challenge)"
+      "Bash(curl -s https://ssjoxiktfhugmcohrqhm.supabase.co/functions/v1/altcha-challenge)",
+      "Bash(ls:*)"
     ],
     "deny": []
   }

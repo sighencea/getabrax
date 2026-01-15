@@ -14,6 +14,7 @@ const corsHeaders = {
 interface WaitlistPayload {
   name: string;
   email: string;
+  platforms: string[];
   altcha: string;
 }
 
@@ -54,9 +55,22 @@ serve(async (req) => {
     const body: WaitlistPayload = await req.json();
 
     // Validate required fields
-    if (!body.name || !body.email || !body.altcha) {
+    if (!body.name || !body.email || !body.altcha || !body.platforms || body.platforms.length === 0) {
       return new Response(
         JSON.stringify({ error: "Missing required fields" }),
+        {
+          status: 400,
+          headers: { ...corsHeaders, "Content-Type": "application/json" },
+        }
+      );
+    }
+
+    // Validate platforms
+    const validPlatforms = ['android', 'ios', 'web'];
+    const invalidPlatforms = body.platforms.filter(p => !validPlatforms.includes(p));
+    if (invalidPlatforms.length > 0) {
+      return new Response(
+        JSON.stringify({ error: "Invalid platform selection" }),
         {
           status: 400,
           headers: { ...corsHeaders, "Content-Type": "application/json" },
@@ -93,6 +107,7 @@ serve(async (req) => {
     const { error: dbError } = await supabase.from("waitlist").insert({
       name: body.name.trim(),
       email: body.email.toLowerCase().trim(),
+      platforms: body.platforms,
     });
 
     if (dbError) {

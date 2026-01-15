@@ -339,20 +339,29 @@ export default {
     button: "Auf Warteliste Setzen"
   },
   waitlist: {
-    title: "Auf die Warteliste Setzen",
-    subtitle: "Erfahren Sie als Erstes, wenn Abrax startet",
+    title: "Der Testphase beitreten",
+    subtitle: "Gehören Sie zu den Ersten, die Abrax erleben",
     form: {
       name: "Ihr Name",
       namePlaceholder: "Max Mustermann",
       email: "E-Mail-Adresse",
       emailPlaceholder: "max@beispiel.de",
+      platform: "Welche Plattformen interessieren Sie?",
+      platforms: {
+        android: "Android",
+        ios: "iOS",
+        web: "Web"
+      },
       submit: "Auf Warteliste Setzen",
       privacy: "Wir respektieren Ihre Privatsphäre. Jederzeit abmelden."
     },
-    success: "Sie sind auf der Liste! Wir melden uns bald.",
+    successTitle: "Sie sind auf der Liste!",
+    successMessage: "Vielen Dank für Ihre Anmeldung zur Warteliste. Wir benachrichtigen Sie per E-Mail, sobald die Testphase für unsere geschlossene Gruppe startet.",
+    gotIt: "Verstanden!",
     errors: {
       captchaRequired: "Bitte Verifizierung abschließen",
       emailExists: "Diese E-Mail ist bereits auf der Warteliste",
+      platformRequired: "Bitte wählen Sie mindestens eine Plattform",
       generic: "Etwas ist schiefgelaufen. Bitte erneut versuchen."
     }
   },

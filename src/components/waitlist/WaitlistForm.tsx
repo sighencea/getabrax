@@ -9,6 +9,9 @@ import { Loader2 } from 'lucide-react';
 import { AltchaWidget, AltchaWidgetRef } from './AltchaWidget';
 import { getWaitlistSubmitUrl } from '../../lib/supabase';
 
+const PLATFORM_OPTIONS = ['android', 'ios', 'web'] as const;
+type Platform = typeof PLATFORM_OPTIONS[number];
+
 const waitlistSchema = z.object({
   name: z.string().min(2, 'Name must be at least 2 characters'),
   email: z.string().email('Invalid email address'),
@@ -24,7 +27,16 @@ export const WaitlistForm: React.FC<WaitlistFormProps> = ({ onSuccess }) => {
   const { t } = useTranslation();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [altchaPayload, setAltchaPayload] = useState<string | null>(null);
+  const [selectedPlatforms, setSelectedPlatforms] = useState<Platform[]>([]);
   const altchaRef = useRef<AltchaWidgetRef>(null);
+
+  const togglePlatform = (platform: Platform) => {
+    setSelectedPlatforms((prev) =>
+      prev.includes(platform)
+        ? prev.filter((p) => p !== platform)
+        : [...prev, platform]
+    );
+  };
 
   const {
     register,
@@ -41,6 +53,11 @@ export const WaitlistForm: React.FC<WaitlistFormProps> = ({ onSuccess }) => {
       return;
     }
 
+    if (selectedPlatforms.length === 0) {
+      toast.error(t('waitlist.errors.platformRequired'));
+      return;
+    }
+
     setIsSubmitting(true);
 
     try {
@@ -50,6 +67,7 @@ export const WaitlistForm: React.FC<WaitlistFormProps> = ({ onSuccess }) => {
         body: JSON.stringify({
           name: data.name,
           email: data.email,
+          platforms: selectedPlatforms,
           altcha: altchaPayload,
         }),
       });
@@ -65,9 +83,9 @@ export const WaitlistForm: React.FC<WaitlistFormProps> = ({ onSuccess }) => {
         return;
       }
 
-      toast.success(t('waitlist.success'));
       reset();
       setAltchaPayload(null);
+      setSelectedPlatforms([]);
       altchaRef.current?.reset();
       onSuccess?.();
     } catch (error) {
@@ -120,6 +138,30 @@ export const WaitlistForm: React.FC<WaitlistFormProps> = ({ onSuccess }) => {
         {errors.email && (
           <p className="text-red-500 text-sm mt-1">{errors.email.message}</p>
         )}
+      </div>
+
+      {/* Platform Selection */}
+      <div>
+        <label className="block text-sm font-medium text-gray-700 mb-2">
+          {t('waitlist.form.platform')}
+        </label>
+        <div className="flex flex-wrap gap-2">
+          {PLATFORM_OPTIONS.map((platform) => (
+            <button
+              key={platform}
+              type="button"
+              onClick={() => togglePlatform(platform)}
+              disabled={isSubmitting}
+              className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors border ${
+                selectedPlatforms.includes(platform)
+                  ? 'bg-blue-600 text-white border-blue-600'
+                  : 'bg-white text-gray-700 border-gray-300 hover:border-blue-400'
+              } disabled:opacity-50`}
+            >
+              {t(`waitlist.form.platforms.${platform}`)}
+            </button>
+          ))}
+        </div>
       </div>
 
       {/* ALTCHA Widget */}
