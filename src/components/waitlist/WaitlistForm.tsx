@@ -49,6 +49,10 @@ export const WaitlistForm: React.FC<WaitlistFormProps> = ({ onSuccess }) => {
     resolver: zodResolver(waitlistSchema),
   });
 
+  // Create register handlers that also clear form errors
+  const nameRegister = register('name');
+  const emailRegister = register('email');
+
   const onSubmit = async (data: WaitlistFormData) => {
     // Clear previous errors
     setFormError(null);
@@ -113,13 +117,16 @@ export const WaitlistForm: React.FC<WaitlistFormProps> = ({ onSuccess }) => {
           {t('waitlist.form.name')} <span className="text-red-500">*</span>
         </label>
         <input
-          {...register('name')}
+          {...nameRegister}
+          onChange={(e) => {
+            nameRegister.onChange(e);
+            setFormError(null);
+          }}
           type="text"
           id="waitlist-name"
           placeholder={t('waitlist.form.namePlaceholder')}
           className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
           disabled={isSubmitting}
-          onChange={() => setFormError(null)}
         />
         {errors.name && (
           <p className="text-red-500 text-sm mt-1">{errors.name.message}</p>
@@ -135,13 +142,16 @@ export const WaitlistForm: React.FC<WaitlistFormProps> = ({ onSuccess }) => {
           {t('waitlist.form.email')} <span className="text-red-500">*</span>
         </label>
         <input
-          {...register('email')}
+          {...emailRegister}
+          onChange={(e) => {
+            emailRegister.onChange(e);
+            setFormError(null);
+          }}
           type="email"
           id="waitlist-email"
           placeholder={t('waitlist.form.emailPlaceholder')}
           className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
           disabled={isSubmitting}
-          onChange={() => setFormError(null)}
         />
         {errors.email && (
           <p className="text-red-500 text-sm mt-1">{errors.email.message}</p>
