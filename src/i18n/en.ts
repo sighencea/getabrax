@@ -861,10 +861,10 @@ export default {
     },
     privacyPolicy: {
       title: "Privacy Policy",
-      lastUpdated: "Last updated: [DATE_PLACEHOLDER]",
+      lastUpdated: "Last updated: March 19, 2026",
       introduction: {
         title: "Introduction",
-        content: "This Privacy Policy describes how [COMPANY_NAME_PLACEHOLDER] (\"we,\" \"us,\" or \"our\") collects, uses, and protects your personal information when you use our property maintenance management platform Abrax (\"Service\"). We are committed to protecting your privacy and ensuring the security of your personal data."
+        content: "This Privacy Policy describes how Abrax (\"we,\" \"us,\" or \"our\") collects, uses, and protects your personal information when you use our property maintenance management platform Abrax (\"Service\"). We are committed to protecting your privacy and ensuring the security of your personal data."
       },
       sections: {
         informationWeCollect: {
@@ -942,7 +942,7 @@ export default {
             "Right to object to processing",
             "Right to withdraw consent"
           ],
-          contact: "To exercise these rights, please contact us at [LEGAL_EMAIL_PLACEHOLDER]."
+          contact: "To exercise these rights, please contact us at info@getabrax.com."
         },
         internationalTransfers: {
           title: "International Data Transfers",
@@ -960,19 +960,19 @@ export default {
           title: "Contact Information",
           content: "If you have questions about this Privacy Policy or our privacy practices, please contact us:",
           details: [
-            "Email: [LEGAL_EMAIL_PLACEHOLDER]",
-            "Address: [COMPANY_ADDRESS_PLACEHOLDER]",
-            "Data Protection Officer: [DPO_NAME_PLACEHOLDER]"
+            "Email: info@getabrax.com",
+            "Address: Contact us at info@getabrax.com for our postal address",
+            "Data Protection Officer: Radu Sighencea (info@getabrax.com)"
           ]
         }
       }
     },
     termsOfService: {
       title: "Terms of Service",
-      lastUpdated: "Last updated: [DATE_PLACEHOLDER]",
+      lastUpdated: "Last updated: March 19, 2026",
       introduction: {
         title: "Introduction",
-        content: "These Terms of Service (\"Terms\") govern your use of the Abrax property maintenance management platform (\"Service\") operated by [COMPANY_NAME_PLACEHOLDER] (\"we,\" \"us,\" or \"our\"). By accessing or using our Service, you agree to be bound by these Terms."
+        content: "These Terms of Service (\"Terms\") govern your use of the Abrax property maintenance management platform (\"Service\") operated by Abrax (\"we,\" \"us,\" or \"our\"). By accessing or using our Service, you agree to be bound by these Terms."
       },
       sections: {
         acceptanceOfTerms: {
@@ -1070,7 +1070,7 @@ export default {
         },
         governingLaw: {
           title: "Governing Law",
-          content: "These Terms are governed by and construed in accordance with the laws of [JURISDICTION_PLACEHOLDER]. Any disputes arising under these Terms shall be subject to the exclusive jurisdiction of the courts in [JURISDICTION_PLACEHOLDER]."
+          content: "These Terms are governed by and construed in accordance with the laws of the Republic of Ireland, Cork, Co. Cork. Any disputes arising under these Terms shall be subject to the exclusive jurisdiction of the courts in the Republic of Ireland, Cork, Co. Cork."
         },
         changes: {
           title: "Changes to Terms",
@@ -1078,16 +1078,16 @@ export default {
         },
         contact: {
           title: "Contact Information",
-          content: "If you have questions about these Terms, please contact us at [LEGAL_EMAIL_PLACEHOLDER]."
+          content: "If you have questions about these Terms, please contact us at info@getabrax.com."
         }
       }
     },
     cookiePolicy: {
       title: "Cookie Policy",
-      lastUpdated: "Last updated: [DATE_PLACEHOLDER]",
+      lastUpdated: "Last updated: March 19, 2026",
       introduction: {
         title: "Introduction",
-        content: "This Cookie Policy explains how [COMPANY_NAME_PLACEHOLDER] uses browser storage technologies when you use our Abrax property maintenance management platform. Currently, we do not use traditional HTTP cookies but rely on local browser storage for essential functionality."
+        content: "This Cookie Policy explains how Abrax uses browser storage technologies when you use our Abrax property maintenance management platform. Currently, we do not use traditional HTTP cookies but rely on local browser storage for essential functionality."
       },
       sections: {
         whatAreCookies: {
@@ -1167,16 +1167,16 @@ export default {
         },
         contact: {
           title: "Contact",
-          content: "If you have questions about this Cookie Policy, please contact us at [LEGAL_EMAIL_PLACEHOLDER]."
+          content: "If you have questions about this Cookie Policy, please contact us at info@getabrax.com."
         }
       }
     },
     gdpr: {
       title: "GDPR Compliance",
-      lastUpdated: "Last updated: [DATE_PLACEHOLDER]",
+      lastUpdated: "Last updated: March 19, 2026",
       introduction: {
         title: "Introduction",
-        content: "This page outlines how [COMPANY_NAME_PLACEHOLDER] complies with the General Data Protection Regulation (GDPR) and protects your privacy rights as an EU citizen."
+        content: "This page outlines how Abrax complies with the General Data Protection Regulation (GDPR) and protects your privacy rights as an EU citizen."
       },
       sections: {
         personalData: {
@@ -1296,9 +1296,9 @@ export default {
           title: "Contact for GDPR Matters",
           content: "For GDPR-related inquiries or to exercise your rights:",
           details: [
-            "Email: [LEGAL_EMAIL_PLACEHOLDER]",
-            "Data Protection Officer: [DPO_CONTACT_PLACEHOLDER]", 
-            "Postal Address: [COMPANY_ADDRESS_PLACEHOLDER]",
+            "Email: info@getabrax.com",
+            "Data Protection Officer: Radu Sighencea (info@getabrax.com)", 
+            "Postal Address: Contact us at info@getabrax.com for our postal address",
             "You also have the right to lodge a complaint with the relevant supervisory authority"
           ]
         }
