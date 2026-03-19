@@ -16,7 +16,10 @@
       "Bash(grep:*)",
       "Bash(npx supabase:*)",
       "Bash(curl -s https://ssjoxiktfhugmcohrqhm.supabase.co/functions/v1/altcha-challenge)",
-      "Bash(ls:*)"
+      "Bash(ls:*)",
+      "Bash(find /home/t490/Documents/GitHub/getabrax -maxdepth 2 -type f \\\\\\(-name *.yml -o -name *.yaml \\\\\\))",
+      "Bash(git -C /home/t490/Documents/GitHub/getabrax config --get remote.origin.url)",
+      "Bash(git -C /home/t490/Documents/GitHub/getabrax log --oneline --all)"
     ],
     "deny": []
   }
