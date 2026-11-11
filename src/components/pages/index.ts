@@ -8,4 +8,5 @@ export { PrivacyPolicyPage } from './PrivacyPolicyPage';
 export { TermsOfServicePage } from './TermsOfServicePage';
 export { CookiePolicyPage } from './CookiePolicyPage';
 export { GdprPage } from './GdprPage';
+export { DeleteAccountPage } from './DeleteAccountPage';
 export { PageTemplate } from './PageTemplate';

@@ -408,7 +408,8 @@ export default {
           "Privacy Policy",
           "Terms of Service",
           "Cookie Policy",
-          "GDPR"
+          "GDPR",
+          "Delete account"
         ]
       }
     },
@@ -1079,6 +1080,52 @@ export default {
         contact: {
           title: "Contact Information",
           content: "If you have questions about these Terms, please contact us at info@getabrax.com."
+        }
+      }
+    },
+    deleteAccount: {
+      title: "Delete your Abrax account",
+      lastUpdated: "Last updated: November 11, 2026",
+      introduction: "Every Abrax user can delete their own account from inside the product, without contacting anyone. This page explains where the option is, what is deleted and what has to be kept for a legally required period.",
+      sections: {
+        howToDeleteWeb: {
+          title: "In the web app (app.abrax.one)",
+          steps: [
+            "Sign in and open your account: staff and administrators via the profile menu at the bottom of the sidebar, then Account, then the Privacy tab; clients and tenants via the Privacy and data entry in the portal menu.",
+            "Choose Delete my account.",
+            "Type your email address to confirm and choose Delete permanently."
+          ]
+        },
+        howToDeleteApp: {
+          title: "In the Abrax app (iOS and Android)",
+          steps: [
+            "Sign in and open Settings: staff and administrators via the Settings tab; clients and tenants via More.",
+            "In the Privacy section choose Delete my account.",
+            "Confirm the dialog."
+          ]
+        },
+        portalAccounts: {
+          title: "Clients and tenants: what is deleted",
+          content: "Portal accounts are deleted immediately and permanently:",
+          items: [
+            "your login and your profile",
+            "your portal access record",
+            "the photos you uploaded with fault reports",
+            "your notifications and registered devices"
+          ]
+        },
+        staffAccounts: {
+          title: "Staff and administrators: what is deleted and what is kept",
+          content: "Your login is closed immediately and your phone number, address, emergency contacts, profile photo, notification settings and registered devices are removed. Working-time and payroll records are subject to statutory retention periods in Germany (up to six years, in some cases ten). Your employer must keep them for that time; afterwards they are erased or pseudonymised. The only administrator of an agency has to hand administrator rights to someone else first."
+        },
+        exportFirst: {
+          title: "Take a copy first",
+          content: "Next to the delete option you find Export my data, which downloads a JSON file with the personal data stored about you. Do this before deleting if you want to keep a copy."
+        },
+        withoutAccess: {
+          title: "If you can no longer sign in",
+          content: "Write to us from the email address of the account. We verify the request with that address and carry out the deletion for you.",
+          contactLink: "Contact us"
         }
       }
     },

@@ -78,6 +78,10 @@ export default function Footer({}: FooterProps) {
       label: t('footer.sections.legal.items.3'),
       href: "/gdpr",
       isScrollLink: false
+    }, {
+      label: t('footer.sections.legal.items.4'),
+      href: "/delete-account",
+      isScrollLink: false
     }]
   };
   const socialLinks = [{

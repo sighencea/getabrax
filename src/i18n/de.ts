@@ -408,7 +408,8 @@ export default {
           "Datenschutzerklärung",
           "Nutzungsbedingungen",
           "Cookie-Richtlinie",
-          "DSGVO"
+          "DSGVO",
+          "Konto löschen"
         ]
       }
     },
@@ -1082,6 +1083,52 @@ export default {
         contact: {
           title: "Kontakt",
           content: "Bei Fragen zu diesen Nutzungsbedingungen kontaktieren Sie uns bitte unter [RECHTLICH_EMAIL_PLATZHALTER]."
+        }
+      }
+    },
+    deleteAccount: {
+      title: "Ihr Abrax-Konto löschen",
+      lastUpdated: "Zuletzt aktualisiert: 11. November 2026",
+      introduction: "Jede Abrax-Nutzerin und jeder Abrax-Nutzer kann das eigene Konto direkt im Produkt löschen, ohne jemanden kontaktieren zu müssen. Diese Seite erklärt, wo die Option zu finden ist, was gelöscht wird und was für eine gesetzlich vorgeschriebene Dauer aufbewahrt werden muss.",
+      sections: {
+        howToDeleteWeb: {
+          title: "In der Web-App (app.abrax.one)",
+          steps: [
+            "Melden Sie sich an und öffnen Sie Ihr Konto: Mitarbeiter und Administratoren über das Profilmenü unten in der Seitenleiste, dann Konto, dann den Reiter Datenschutz; Kunden und Bewohner über den Eintrag Datenschutz und Daten im Portalmenü.",
+            "Wählen Sie Mein Konto löschen.",
+            "Geben Sie zur Bestätigung Ihre E-Mail-Adresse ein und wählen Sie Endgültig löschen."
+          ]
+        },
+        howToDeleteApp: {
+          title: "In der Abrax-App (iOS und Android)",
+          steps: [
+            "Melden Sie sich an und öffnen Sie die Einstellungen: Mitarbeiter und Administratoren über den Reiter Einstellungen; Kunden und Bewohner über Mehr.",
+            "Wählen Sie im Abschnitt Datenschutz die Option Mein Konto löschen.",
+            "Bestätigen Sie den Dialog."
+          ]
+        },
+        portalAccounts: {
+          title: "Kunden und Bewohner: was gelöscht wird",
+          content: "Portalkonten werden sofort und dauerhaft gelöscht:",
+          items: [
+            "Ihr Login und Ihr Profil",
+            "Ihr Portalzugang",
+            "die Fotos, die Sie mit Mängelmeldungen hochgeladen haben",
+            "Ihre Benachrichtigungen und registrierten Geräte"
+          ]
+        },
+        staffAccounts: {
+          title: "Mitarbeiter und Administratoren: was gelöscht und was aufbewahrt wird",
+          content: "Ihr Login wird sofort geschlossen; Telefonnummer, Adresse, Notfallkontakte, Profilfoto, Benachrichtigungseinstellungen und registrierte Geräte werden entfernt. Arbeitszeit- und Lohnunterlagen unterliegen in Deutschland gesetzlichen Aufbewahrungsfristen (bis zu sechs, in Einzelfällen zehn Jahre). Ihr Arbeitgeber muss sie für diese Zeit aufbewahren; danach werden sie gelöscht oder pseudonymisiert. Der einzige Administrator eines Betriebs muss die Administratorrechte zuerst an eine andere Person übertragen."
+        },
+        exportFirst: {
+          title: "Vorher eine Kopie sichern",
+          content: "Neben der Löschoption finden Sie Meine Daten exportieren. Damit laden Sie eine JSON-Datei mit den über Sie gespeicherten personenbezogenen Daten herunter. Tun Sie das vor dem Löschen, wenn Sie eine Kopie behalten möchten."
+        },
+        withoutAccess: {
+          title: "Wenn Sie sich nicht mehr anmelden können",
+          content: "Schreiben Sie uns von der E-Mail-Adresse des Kontos aus. Wir prüfen die Anfrage über diese Adresse und führen die Löschung für Sie durch.",
+          contactLink: "Kontakt aufnehmen"
         }
       }
     },

@@ -15,6 +15,7 @@ import { PrivacyPolicyPage } from './components/pages/PrivacyPolicyPage';
 import { TermsOfServicePage } from './components/pages/TermsOfServicePage';
 import { CookiePolicyPage } from './components/pages/CookiePolicyPage';
 import { GdprPage } from './components/pages/GdprPage';
+import { DeleteAccountPage } from './components/pages/DeleteAccountPage';
 import { ScrollToTop } from './components/utils/ScrollToTop';
 
 let theme: Theme = 'light';
@@ -50,6 +51,7 @@ function App() {
               <Route path="/terms-of-service" element={<TermsOfServicePage />} />
               <Route path="/cookie-policy" element={<CookiePolicyPage />} />
               <Route path="/gdpr" element={<GdprPage />} />
+              <Route path="/delete-account" element={<DeleteAccountPage />} />
             </Routes>
           </Router>
           <WaitlistModal />
